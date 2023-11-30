@@ -106,12 +106,8 @@ namespace AutoOffline
 
         private void timerBasic_Tick(object sender, EventArgs e)
         {
-            string off = "Shutdown not set";
             if (time < 1) // If Timer hits 0 it turns the Timer off and prints "Shutdown not set"
             {
-                timerBasic.Stop();
-                labelConDown.Text = off;
-                Menu.instance.tb1.Text = ("Shutdown not set");
             }
             else if (time > 86400)
             {
