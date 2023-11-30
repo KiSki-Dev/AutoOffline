@@ -148,13 +148,9 @@ namespace AutoOffline
 
         private void timerPre_Tick(object sender, EventArgs e) // Timer
         {
-            string off = "Shutdown not set";
             // If the Timer is above 0 it normally works
             if (seconds < 1) // If Timer hits 0 it turns the Timer off and prints "Shutdown not set"
             {
-                timerPre.Stop();
-                labelCdown.Text = off;
-                Menu.instance.tb1.Text = ("Shutdown not set");
             }
             else
             {
