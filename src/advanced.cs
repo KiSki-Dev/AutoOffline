@@ -107,12 +107,8 @@ namespace AutoOffline
 
         private void timerAdv_Tick_1(object sender, EventArgs e)
         {
-            string off = "Shutdown not set";
             if (time < 1) // If Timer hits 0 it turns the Timer off and prints "Shutdown not set"
             {
-                timerAdv.Stop();
-                labelCdown.Text = off;
-                Menu.instance.tb1.Text = ("Shutdown not set");
             }
             else if (time > 86400) // If Timer goes over 1 day it adds 2 Zeros do the Countdown at the Top to print the Days left
             {
