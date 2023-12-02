@@ -42,7 +42,7 @@
             // 
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = Properties.Resources.github;
-            pictureBox1.Location = new Point(49, 305);
+            pictureBox1.Location = new Point(49, 303);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(48, 48);
             pictureBox1.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = Properties.Resources.discord_small;
-            pictureBox2.Location = new Point(49, 377);
+            pictureBox2.Location = new Point(49, 375);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(48, 48);
             pictureBox2.TabIndex = 2;
@@ -65,7 +65,7 @@
             linkLabel1.AutoSize = true;
             linkLabel1.Cursor = Cursors.Hand;
             linkLabel1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel1.Location = new Point(113, 389);
+            linkLabel1.Location = new Point(113, 387);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(204, 23);
             linkLabel1.TabIndex = 3;
@@ -78,7 +78,7 @@
             linkLabel2.AutoSize = true;
             linkLabel2.Cursor = Cursors.Hand;
             linkLabel2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel2.Location = new Point(113, 318);
+            linkLabel2.Location = new Point(113, 316);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(181, 23);
             linkLabel2.TabIndex = 4;
@@ -92,9 +92,9 @@
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(21, 13);
+            label1.Location = new Point(27, 25);
             label1.Name = "label1";
-            label1.Size = new Size(631, 275);
+            label1.Size = new Size(641, 250);
             label1.TabIndex = 5;
             label1.Text = resources.GetString("label1.Text");
             // 

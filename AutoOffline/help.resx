@@ -125,8 +125,7 @@ where your PC should shutdown.
 
 If the Timer hits 0, your PC will shutdown.
 If you Press "Stop Shutdown" before the Timer 
-hits 0,  your PC will not Shutdown if the Timers 
-hits 0.
+hits 0, your PC will not Shutdown if the Timers hits 0.
 
 For Support join my Discord Server.
 </value>
