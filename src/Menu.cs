@@ -74,14 +74,12 @@ namespace AutoOffline
             Process.Start("explorer", url);
         }
 
-        private void buttonStopSTD_Click(object sender, EventArgs e) // Stop the Timers
+        // Stop Timer
+        private void buttonStopSTD_Click(object sender, EventArgs e)
         {
             Process.Start("shutdown", "-a");
 
-            home.instance.StopTimer(); // Stop Home Timer
-            basic.instance.StopTimer(); // Stop Basic Timer
-
-            TimerManager.StopAllTimers(); // Stop Advanced
+            TimerManager.StopAllTimers(); // Stop all Timers
 
             tb1.Text = "Shutdown not set";
         }

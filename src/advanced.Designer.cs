@@ -30,19 +30,15 @@
         {
             components = new System.ComponentModel.Container();
             buttonFNSH = new Button();
-            richTextBoxSec = new RichTextBox();
-            richTextBox1 = new RichTextBox();
-            panel2 = new Panel();
-            tbSec = new RichTextBox();
-            tbMin = new RichTextBox();
-            tbHr = new RichTextBox();
-            tbDay = new RichTextBox();
             labelCdown = new Label();
             labelErrorMessage = new Label();
             labelError = new Label();
-            richTextBox2 = new RichTextBox();
-            richTextBox3 = new RichTextBox();
             timerAdv = new System.Windows.Forms.Timer(components);
+            DatePicker1 = new DatePicker();
+            dateOn = new Label();
+            numUpDownHr = new NumUpDown();
+            numUpDownMin = new NumUpDown();
+            numUpDownSec = new NumUpDown();
             SuspendLayout();
             // 
             // buttonFNSH
@@ -51,119 +47,19 @@
             buttonFNSH.FlatStyle = FlatStyle.Flat;
             buttonFNSH.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonFNSH.ForeColor = Color.White;
-            buttonFNSH.Location = new Point(454, 179);
+            buttonFNSH.Location = new Point(420, 169);
             buttonFNSH.Name = "buttonFNSH";
-            buttonFNSH.Size = new Size(159, 80);
+            buttonFNSH.Size = new Size(160, 80);
             buttonFNSH.TabIndex = 5;
             buttonFNSH.Text = "Start Shutdown";
             buttonFNSH.UseVisualStyleBackColor = false;
             buttonFNSH.Click += buttonFNSH_Click;
             // 
-            // richTextBoxSec
-            // 
-            richTextBoxSec.BackColor = Color.Gray;
-            richTextBoxSec.BorderStyle = BorderStyle.None;
-            richTextBoxSec.Cursor = Cursors.Hand;
-            richTextBoxSec.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBoxSec.ForeColor = Color.Black;
-            richTextBoxSec.Location = new Point(63, 92);
-            richTextBoxSec.Name = "richTextBoxSec";
-            richTextBoxSec.ReadOnly = true;
-            richTextBoxSec.RightToLeft = RightToLeft.No;
-            richTextBoxSec.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBoxSec.Size = new Size(100, 28);
-            richTextBoxSec.TabIndex = 7;
-            richTextBoxSec.Text = "Seconds";
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.BackColor = Color.Gray;
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Cursor = Cursors.Hand;
-            richTextBox1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox1.ForeColor = Color.Black;
-            richTextBox1.Location = new Point(268, 92);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.RightToLeft = RightToLeft.No;
-            richTextBox1.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox1.Size = new Size(100, 28);
-            richTextBox1.TabIndex = 8;
-            richTextBox1.Text = "Minutes";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Black;
-            panel2.Location = new Point(653, -1);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(200, 478);
-            panel2.TabIndex = 11;
-            // 
-            // tbSec
-            // 
-            tbSec.BackColor = Color.DarkGray;
-            tbSec.BorderStyle = BorderStyle.None;
-            tbSec.Cursor = Cursors.IBeam;
-            tbSec.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            tbSec.ForeColor = Color.White;
-            tbSec.Location = new Point(38, 126);
-            tbSec.Name = "tbSec";
-            tbSec.RightToLeft = RightToLeft.No;
-            tbSec.ScrollBars = RichTextBoxScrollBars.None;
-            tbSec.Size = new Size(163, 32);
-            tbSec.TabIndex = 12;
-            tbSec.Text = "0";
-            // 
-            // tbMin
-            // 
-            tbMin.BackColor = Color.DarkGray;
-            tbMin.BorderStyle = BorderStyle.None;
-            tbMin.Cursor = Cursors.IBeam;
-            tbMin.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            tbMin.ForeColor = Color.White;
-            tbMin.Location = new Point(237, 126);
-            tbMin.Name = "tbMin";
-            tbMin.RightToLeft = RightToLeft.No;
-            tbMin.ScrollBars = RichTextBoxScrollBars.None;
-            tbMin.Size = new Size(168, 32);
-            tbMin.TabIndex = 13;
-            tbMin.Text = "0";
-            // 
-            // tbHr
-            // 
-            tbHr.BackColor = Color.DarkGray;
-            tbHr.BorderStyle = BorderStyle.None;
-            tbHr.Cursor = Cursors.IBeam;
-            tbHr.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            tbHr.ForeColor = Color.White;
-            tbHr.Location = new Point(38, 265);
-            tbHr.Name = "tbHr";
-            tbHr.RightToLeft = RightToLeft.No;
-            tbHr.ScrollBars = RichTextBoxScrollBars.None;
-            tbHr.Size = new Size(163, 32);
-            tbHr.TabIndex = 14;
-            tbHr.Text = "0";
-            // 
-            // tbDay
-            // 
-            tbDay.BackColor = Color.DarkGray;
-            tbDay.BorderStyle = BorderStyle.None;
-            tbDay.Cursor = Cursors.IBeam;
-            tbDay.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            tbDay.ForeColor = Color.White;
-            tbDay.Location = new Point(237, 265);
-            tbDay.Name = "tbDay";
-            tbDay.RightToLeft = RightToLeft.No;
-            tbDay.ScrollBars = RichTextBoxScrollBars.None;
-            tbDay.Size = new Size(168, 32);
-            tbDay.TabIndex = 15;
-            tbDay.Text = "0";
-            // 
             // labelCdown
             // 
             labelCdown.AutoSize = true;
             labelCdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCdown.Location = new Point(431, 60);
+            labelCdown.Location = new Point(31, 9);
             labelCdown.Name = "labelCdown";
             labelCdown.Size = new Size(77, 23);
             labelCdown.TabIndex = 16;
@@ -176,57 +72,28 @@
             labelErrorMessage.BackColor = Color.Red;
             labelErrorMessage.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelErrorMessage.ForeColor = Color.White;
-            labelErrorMessage.Location = new Point(445, 293);
+            labelErrorMessage.Location = new Point(405, 282);
             labelErrorMessage.Name = "labelErrorMessage";
-            labelErrorMessage.Size = new Size(177, 25);
+            labelErrorMessage.Size = new Size(191, 50);
             labelErrorMessage.TabIndex = 17;
-            labelErrorMessage.Text = "Time cant be 0";
+            labelErrorMessage.Text = "Time cannot be \r\nin the past\r\n";
+            labelErrorMessage.TextAlign = ContentAlignment.MiddleCenter;
             labelErrorMessage.Visible = false;
             // 
             // labelError
             // 
             labelError.AutoSize = true;
             labelError.BackColor = Color.Red;
-            labelError.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelError.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelError.ForeColor = Color.White;
-            labelError.Location = new Point(496, 270);
+            labelError.Location = new Point(461, 257);
             labelError.Name = "labelError";
-            labelError.Size = new Size(71, 23);
+            labelError.RightToLeft = RightToLeft.No;
+            labelError.Size = new Size(78, 25);
             labelError.TabIndex = 18;
             labelError.Text = "Error:";
+            labelError.TextAlign = ContentAlignment.MiddleCenter;
             labelError.Visible = false;
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.BackColor = Color.Gray;
-            richTextBox2.BorderStyle = BorderStyle.None;
-            richTextBox2.Cursor = Cursors.Hand;
-            richTextBox2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox2.ForeColor = Color.Black;
-            richTextBox2.Location = new Point(63, 231);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.ReadOnly = true;
-            richTextBox2.RightToLeft = RightToLeft.No;
-            richTextBox2.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox2.Size = new Size(100, 28);
-            richTextBox2.TabIndex = 19;
-            richTextBox2.Text = "Hours";
-            // 
-            // richTextBox3
-            // 
-            richTextBox3.BackColor = Color.Gray;
-            richTextBox3.BorderStyle = BorderStyle.None;
-            richTextBox3.Cursor = Cursors.Hand;
-            richTextBox3.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox3.ForeColor = Color.Black;
-            richTextBox3.Location = new Point(268, 231);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.ReadOnly = true;
-            richTextBox3.RightToLeft = RightToLeft.No;
-            richTextBox3.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox3.Size = new Size(100, 28);
-            richTextBox3.TabIndex = 20;
-            richTextBox3.Text = "Days";
             // 
             // timerAdv
             // 
@@ -234,28 +101,104 @@
             timerAdv.Interval = 1000;
             timerAdv.Tick += timerAdv_Tick_1;
             // 
+            // DatePicker1
+            // 
+            DatePicker1.BorderColor = Color.MediumVioletRed;
+            DatePicker1.BorderSize = 0;
+            DatePicker1.CalendarFont = new Font("Verdana", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            DatePicker1.CalendarForeColor = Color.White;
+            DatePicker1.CalendarMonthBackground = Color.White;
+            DatePicker1.CalendarTitleBackColor = Color.White;
+            DatePicker1.CalendarTitleForeColor = Color.White;
+            DatePicker1.CalendarTrailingForeColor = Color.White;
+            DatePicker1.CustomFormat = "dd.MM.yyyy";
+            DatePicker1.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
+            DatePicker1.Format = DateTimePickerFormat.Short;
+            DatePicker1.Location = new Point(45, 151);
+            DatePicker1.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
+            DatePicker1.MinDate = new DateTime(2023, 12, 1, 21, 42, 23, 931);
+            DatePicker1.MinimumSize = new Size(0, 35);
+            DatePicker1.Name = "DatePicker1";
+            DatePicker1.Size = new Size(292, 42);
+            DatePicker1.SkinColor = Color.MediumSlateBlue;
+            DatePicker1.TabIndex = 23;
+            DatePicker1.TextColor = Color.White;
+            DatePicker1.Value = new DateTime(2023, 12, 1, 21, 42, 23, 932);
+            DatePicker1.ValueChanged += DatePicker1_ValueChanged;
+            // 
+            // dateOn
+            // 
+            dateOn.AutoSize = true;
+            dateOn.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dateOn.ForeColor = Color.White;
+            dateOn.Location = new Point(14, 47);
+            dateOn.Name = "dateOn";
+            dateOn.Size = new Size(90, 35);
+            dateOn.TabIndex = 29;
+            dateOn.Text = "Date";
+            // 
+            // numUpDownHr
+            // 
+            numUpDownHr.BackColor = Color.Gray;
+            numUpDownHr.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
+            numUpDownHr.Format = CustomOptions.Hours;
+            numUpDownHr.Location = new Point(55, 233);
+            numUpDownHr.MinimumSize = new Size(0, 35);
+            numUpDownHr.Name = "numUpDownHr";
+            numUpDownHr.RepeatDelayMs = 160;
+            numUpDownHr.Size = new Size(89, 85);
+            numUpDownHr.SkinColor = Color.MediumSlateBlue;
+            numUpDownHr.TabIndex = 30;
+            numUpDownHr.Text = "0";
+            numUpDownHr.TextChanged += numUpDownHr_TextChanged;
+            // 
+            // numUpDownMin
+            // 
+            numUpDownMin.BackColor = Color.Gray;
+            numUpDownMin.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
+            numUpDownMin.Format = CustomOptions.Minutes;
+            numUpDownMin.Location = new Point(141, 233);
+            numUpDownMin.MinimumSize = new Size(0, 35);
+            numUpDownMin.Name = "numUpDownMin";
+            numUpDownMin.RepeatDelayMs = 110;
+            numUpDownMin.Size = new Size(89, 85);
+            numUpDownMin.SkinColor = Color.MediumSlateBlue;
+            numUpDownMin.TabIndex = 31;
+            numUpDownMin.Text = "0";
+            numUpDownMin.TextChanged += numUpDownMin_TextChanged;
+            // 
+            // numUpDownSec
+            // 
+            numUpDownSec.BackColor = Color.Gray;
+            numUpDownSec.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
+            numUpDownSec.Format = CustomOptions.Seconds;
+            numUpDownSec.Location = new Point(227, 233);
+            numUpDownSec.MinimumSize = new Size(0, 35);
+            numUpDownSec.Name = "numUpDownSec";
+            numUpDownSec.RepeatDelayMs = 110;
+            numUpDownSec.Size = new Size(89, 85);
+            numUpDownSec.SkinColor = Color.MediumSlateBlue;
+            numUpDownSec.TabIndex = 32;
+            numUpDownSec.Text = "0";
+            numUpDownSec.TextChanged += numUpDownSec_TextChanged;
+            // 
             // advanced
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
-            Controls.Add(richTextBox3);
-            Controls.Add(richTextBox2);
+            Controls.Add(numUpDownSec);
+            Controls.Add(numUpDownMin);
+            Controls.Add(numUpDownHr);
+            Controls.Add(dateOn);
+            Controls.Add(DatePicker1);
             Controls.Add(labelError);
             Controls.Add(labelErrorMessage);
             Controls.Add(labelCdown);
-            Controls.Add(tbDay);
-            Controls.Add(tbHr);
-            Controls.Add(tbMin);
-            Controls.Add(tbSec);
-            Controls.Add(panel2);
-            Controls.Add(richTextBox1);
-            Controls.Add(richTextBoxSec);
             Controls.Add(buttonFNSH);
             FormBorderStyle = FormBorderStyle.None;
             Name = "advanced";
-            Text = "basic";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -263,8 +206,6 @@
         #endregion
         private Button buttonFNSH;
         private RichTextBox richTextBoxSec;
-        private RichTextBox richTextBox1;
-        private Panel panel2;
         private RichTextBox tbSec;
         private RichTextBox tbMin;
         private RichTextBox tbHr;
@@ -275,5 +216,10 @@
         private RichTextBox richTextBox3;
         private RichTextBox richTextBox2;
         private System.Windows.Forms.Timer timerAdv;
+        private DatePicker DatePicker1;
+        private NumUpDown numUpDownHr;
+        private NumUpDown numUpDownMin;
+        private NumUpDown numUpDownSec;
+        private Label dateOn;
     }
 }

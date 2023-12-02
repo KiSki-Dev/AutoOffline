@@ -5,13 +5,14 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutoOffline
 {
-    public partial class basic : System.Windows.Forms.Form
+    public partial class basic : System.Windows.Forms.Form, ITimerClient
     {
         public static basic instance;
         int time;
@@ -24,50 +25,19 @@ namespace AutoOffline
             TimerManager.RegisterForm(this);
         }
 
-        public static class TimerManager
-        {
-            private static List<Form> activeForms = new List<Form>();
-
-            public static void RegisterForm(Form form)
-            {
-                activeForms.Add(form);
-            }
-
-            public static void UnregisterForm(Form form)
-            {
-                activeForms.Remove(form);
-            }
-
-            public static void StopAllTimers()
-            {
-                foreach (var form in activeForms)
-                {
-                    if (form is basic basic)
-                    {
-                        basic.StopTimer();
-                    }
-                    if (form is advanced advanced)
-                    {
-                        advanced.instance.StopTimer();
-                    }
-                    if (form is home home)
-                    {
-                        home.instance.StopTimer();
-                    }
-                }
-            }
-        }
-
-        private void basic_FormClosed(object sender, FormClosedEventArgs e)
+        private void advanced_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Unregister this form from the TimerManager when it is closed
             TimerManager.UnregisterForm(this);
+
         }
 
         public void StartTimer(int time)
         {
             // Start the timer with the specified number of seconds
+            int seconds = Convert.ToInt32(time);
             timerBasic.Start();
+            Process.Start("shutdown", "/s /t " + seconds);
         }
 
         public void StopTimer()
@@ -75,12 +45,12 @@ namespace AutoOffline
             timerBasic.Stop();
         }
 
-        private void buttonFNSH_Click(object sender, EventArgs e)
+        private void buttonFNSH_Click_1(object sender, EventArgs e)
         {
-            int Sec = int.Parse(comboBoxSec.Text);
-            int Min = int.Parse(comboBoxMin.Text) * 60;
-            int Hr = int.Parse(comboBoxHr.Text) * 3600;
-            int Day = int.Parse(comboBoxDay.Text) * 86400;
+            int Sec = int.Parse(tbSec.Text);
+            int Min = int.Parse(tbMin.Text) * 60;
+            int Hr = int.Parse(tbHr.Text) * 3600;
+            int Day = int.Parse(tbDay.Text) * 86400;
 
             int times = Sec + Min + Hr + Day;
 
@@ -96,33 +66,33 @@ namespace AutoOffline
 
                 labelError.Visible = false;
                 labelErrorMessage.Visible = false;
+                labelCdown.Text = time.ToString();
                 StartTimer(time);
 
-                Process.Start("shutdown", "/s /t " + time);
-
             }
-
         }
+
 
         private void timerBasic_Tick(object sender, EventArgs e)
         {
             if (time < 1) // If Timer hits 0 it turns the Timer off and prints "Shutdown not set"
             {
             }
-            else if (time > 86400)
+            else if (time > 86400) // If Timer goes over 1 day it adds 2 Zeros do the Countdown at the Top to print the Days left
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"dd\:hh\:mm\:ss");
-                labelConDown.Text = str;
+                labelCdown.Text = str;
                 Menu.instance.tb1.Text = ("Shutdown in: " + str);
             }
             else
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"hh\:mm\:ss");
-                labelConDown.Text = str;
+                labelCdown.Text = str;
                 Menu.instance.tb1.Text = ("Shutdown in: " + str);
             }
+
         }
     }
 }

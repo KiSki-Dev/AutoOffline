@@ -19,6 +19,12 @@
     <Compile Update="home.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="NumUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="settings.cs">
       <SubType>Form</SubType>
     </Compile>

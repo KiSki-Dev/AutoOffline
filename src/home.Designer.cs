@@ -30,8 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
-            richTextBoxWelcome = new RichTextBox();
-            richTextBox1 = new RichTextBox();
             richTextBox3 = new RichTextBox();
             panel1 = new Panel();
             button4h = new Button();
@@ -40,41 +38,12 @@
             button30m = new Button();
             button10m = new Button();
             button5m = new Button();
-            panel2 = new Panel();
             timerPre = new System.Windows.Forms.Timer(components);
             labelCdown = new Label();
+            label1 = new Label();
+            labelWelcome = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // richTextBoxWelcome
-            // 
-            richTextBoxWelcome.BackColor = Color.Gray;
-            richTextBoxWelcome.BorderStyle = BorderStyle.None;
-            richTextBoxWelcome.Cursor = Cursors.Help;
-            richTextBoxWelcome.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBoxWelcome.ForeColor = Color.White;
-            richTextBoxWelcome.Location = new Point(27, 22);
-            richTextBoxWelcome.Multiline = false;
-            richTextBoxWelcome.Name = "richTextBoxWelcome";
-            richTextBoxWelcome.ReadOnly = true;
-            richTextBoxWelcome.Size = new Size(464, 47);
-            richTextBoxWelcome.TabIndex = 0;
-            richTextBoxWelcome.Text = "Hello, User!";
-            // 
-            // richTextBox1
-            // 
-            richTextBox1.BackColor = Color.Gray;
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Cursor = Cursors.Help;
-            richTextBox1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox1.ForeColor = Color.White;
-            richTextBox1.Location = new Point(38, 71);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox1.Size = new Size(368, 347);
-            richTextBox1.TabIndex = 1;
-            richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // richTextBox3
             // 
@@ -189,14 +158,6 @@
             button5m.UseVisualStyleBackColor = false;
             button5m.Click += button5m_Click;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Black;
-            panel2.Location = new Point(658, -3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(200, 478);
-            panel2.TabIndex = 5;
-            // 
             // timerPre
             // 
             timerPre.Enabled = true;
@@ -216,17 +177,39 @@
             labelCdown.Text = "Shutdown not set";
             labelCdown.Visible = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(27, 72);
+            label1.Name = "label1";
+            label1.Size = new Size(372, 368);
+            label1.TabIndex = 7;
+            label1.Text = resources.GetString("label1.Text");
+            // 
+            // labelWelcome
+            // 
+            labelWelcome.AutoSize = true;
+            labelWelcome.FlatStyle = FlatStyle.Flat;
+            labelWelcome.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            labelWelcome.ForeColor = Color.White;
+            labelWelcome.Location = new Point(27, 22);
+            labelWelcome.Name = "labelWelcome";
+            labelWelcome.Size = new Size(227, 38);
+            labelWelcome.TabIndex = 8;
+            labelWelcome.Text = "Hello, User!";
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelWelcome);
+            Controls.Add(label1);
             Controls.Add(labelCdown);
-            Controls.Add(panel2);
             Controls.Add(richTextBox3);
-            Controls.Add(richTextBox1);
-            Controls.Add(richTextBoxWelcome);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "home";
@@ -237,12 +220,8 @@
         }
 
         #endregion
-
-        private RichTextBox richTextBoxWelcome;
-        private RichTextBox richTextBox1;
         private RichTextBox richTextBox3;
         private Panel panel1;
-        private Panel panel2;
         private Button button5m;
         private Button button30m;
         private Button button10m;
@@ -251,5 +230,7 @@
         private Button button1h;
         private System.Windows.Forms.Timer timerPre;
         private Label labelCdown;
+        private Label label1;
+        private Label labelWelcome;
     }
 }

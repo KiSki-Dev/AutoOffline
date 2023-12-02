@@ -117,13 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
+  <data name="label1.Text" xml:space="preserve">
     <value>Under "Home" you can find custom Presets.
-Under "Basic" you can select Time Stamps.
-Under "Advanced" you can type your own Time.
+Under "Basic" you can type your own Time.
+Under "Advanced" you can enter a Date and a Time, 
+where your PC should shutdown.
 
 If the Timer hits 0, your PC will shutdown.
-If you Press "Stop Shutdown" before the Timer hits 0, your PC will not Shutdown if the Timers hits 0.
+If you Press "Stop Shutdown" before the Timer hits 0, 
+your PC will not Shutdown if the Timers hits 0.
 
 For Support join my Discord Server.
 </value>

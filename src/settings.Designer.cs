@@ -30,7 +30,6 @@
         {
             label2 = new Label();
             comboBoxLan = new ComboBox();
-            panel2 = new Panel();
             label3 = new Label();
             label4 = new Label();
             richTextBoxUsr = new RichTextBox();
@@ -67,14 +66,6 @@
             comboBoxLan.Name = "comboBoxLan";
             comboBoxLan.Size = new Size(193, 33);
             comboBoxLan.TabIndex = 4;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Black;
-            panel2.Location = new Point(658, -3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(200, 478);
-            panel2.TabIndex = 13;
             // 
             // label3
             // 
@@ -209,7 +200,6 @@
             Controls.Add(richTextBoxUsr);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(panel2);
             Controls.Add(comboBoxLan);
             Controls.Add(label2);
             Controls.Add(richTextBox3);
@@ -223,7 +213,6 @@
         #endregion
         private Label label2;
         private ComboBox comboBoxLan;
-        private Panel panel2;
         private Label label3;
         private Label label4;
         private RichTextBox richTextBoxUsr;

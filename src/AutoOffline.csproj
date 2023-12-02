@@ -13,6 +13,8 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
     <ApplicationIcon>Logo_Auto_Offline.ico</ApplicationIcon>
+
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>

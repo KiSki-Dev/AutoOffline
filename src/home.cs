@@ -17,7 +17,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AutoOffline
 {
-    public partial class home : System.Windows.Forms.Form
+    public partial class home : System.Windows.Forms.Form, ITimerClient
     {
         private string appConfig = Application.StartupPath + @"\config.conf";
         int seconds;
@@ -33,44 +33,10 @@ namespace AutoOffline
             TimerManager.RegisterForm(this);
         }
 
-        public static class TimerManager
-        {
-            private static List<Form> activeForms = new List<Form>();
-
-            public static void RegisterForm(Form form)
-            {
-                activeForms.Add(form);
-            }
-
-            public static void UnregisterForm(Form form)
-            {
-                activeForms.Remove(form);
-            }
-
-            public static void StopAllTimers()
-            {
-                foreach (var form in activeForms)
-                {
-                    if (form is advanced advanced)
-                    {
-                        advanced.instance.StopTimer();
-                    }
-                    if (form is basic basic)
-                    {
-                        basic.instance.StopTimer();
-                    }
-                    if (form is home home)
-                    {
-                        home.instance.StopTimer();
-                    }
-                }
-            }
-        }
-
         private void home_FormClosed(object sender, FormClosedEventArgs e)
         {
-            // Unregister this form from the TimerManager when its closed
-            TimerManager.UnregisterForm(this);
+                // Unregister this form from the TimerManager when it is closed
+                TimerManager.UnregisterForm(this);
         }
 
         public void welcome() // Welcome Text
@@ -81,11 +47,11 @@ namespace AutoOffline
             if (username == "automatic")
             {
                 string username = (Environment.UserName);
-                richTextBoxWelcome.Text = ("Hello, " + username + "!");
+                labelWelcome.Text = ("Hello, " + username + "!");
             }
             else if (username != "automatic")
             {
-                richTextBoxWelcome.Text = ("Hello, " + username + "!");
+                labelWelcome.Text = ("Hello, " + username + "!");
             }
 
         }
