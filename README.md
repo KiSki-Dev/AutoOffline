@@ -12,7 +12,7 @@ Known Issues: [Known Issues List](https://github.com/KiSki-Dev/AutoOffline/issue
 
 License: [License.md](https://github.com/KiSki-Dev/AutoOffline/blob/main/License.md)
 # Todo List:
-- [ ] Overwork Advanced Page
+- [X] Overwork Advanced Page
 - [ ] Fix Known Issues
 - [ ] Complete the Language Feature
 - [ ] Logging System
