@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.IO;
 using System.Net.Sockets;
 using System.Security.Policy;
 using System.Threading;
@@ -17,11 +18,20 @@ namespace AutoOffline
         public Label tb1;
         public Menu()
         {
+            string path = @".\config.conf";
+            if (!File.Exists(path))
+            {
+                // Create the file and write content to it
+                File.WriteAllText(path, "[CONFIG]\nusername=automatic\nlanguage=en");
+            }
+
             InitializeComponent();
             loadform(new home()); // Automatic get the Home View
             instance = this;
             tb1 = labelCountdown;
         }
+
+        
 
         // Below is the Side Menu Code
         public void loadform(object Form) // The Logic how to open a Form with the Menu on the right and Top
