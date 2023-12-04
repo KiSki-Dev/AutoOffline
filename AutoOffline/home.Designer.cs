@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
-            richTextBox3 = new RichTextBox();
             panel1 = new Panel();
             button4h = new Button();
             button2h = new Button();
@@ -42,23 +41,9 @@
             labelCdown = new Label();
             label1 = new Label();
             labelWelcome = new Label();
+            labelPre = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // richTextBox3
-            // 
-            richTextBox3.BackColor = Color.Gray;
-            richTextBox3.BorderStyle = BorderStyle.None;
-            richTextBox3.Cursor = Cursors.Hand;
-            richTextBox3.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox3.ForeColor = Color.White;
-            richTextBox3.Location = new Point(491, 118);
-            richTextBox3.Multiline = false;
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.ReadOnly = true;
-            richTextBox3.Size = new Size(106, 30);
-            richTextBox3.TabIndex = 3;
-            richTextBox3.Text = "Presets";
             // 
             // panel1
             // 
@@ -200,16 +185,28 @@
             labelWelcome.TabIndex = 8;
             labelWelcome.Text = "Hello, User!";
             // 
+            // labelPre
+            // 
+            labelPre.AutoSize = true;
+            labelPre.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            labelPre.ForeColor = Color.White;
+            labelPre.Location = new Point(478, 118);
+            labelPre.Name = "labelPre";
+            labelPre.Size = new Size(114, 29);
+            labelPre.TabIndex = 9;
+            labelPre.Text = "Presets";
+            labelPre.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelPre);
             Controls.Add(labelWelcome);
             Controls.Add(label1);
             Controls.Add(labelCdown);
-            Controls.Add(richTextBox3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "home";
@@ -220,7 +217,6 @@
         }
 
         #endregion
-        private RichTextBox richTextBox3;
         private Panel panel1;
         private Button button5m;
         private Button button30m;
@@ -232,5 +228,6 @@
         private Label labelCdown;
         private Label label1;
         private Label labelWelcome;
+        private Label labelPre;
     }
 }

@@ -1,3 +1,4 @@
+using Salaros.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
@@ -8,6 +9,7 @@ using static AutoOffline.advanced;
 using static AutoOffline.Menu;
 using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AutoOffline
 {
@@ -16,6 +18,8 @@ namespace AutoOffline
     {
         public static Menu instance;
         public Label tb1;
+        private string appConfig = Application.StartupPath + @"\config.conf";
+        private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
         public Menu()
         {
             string path = @".\config.conf";
@@ -29,9 +33,34 @@ namespace AutoOffline
             loadform(new home()); // Automatic get the Home View
             instance = this;
             tb1 = labelCountdown;
+
+            language("menu");
+            language("btn-stop");
+            language("home");
+            language("basic");
+            language("advanced");
+            language("settings");
+            language("help");
+            language("exit");
         }
 
-        
+       public void language(string translate)
+        {
+            var conf = new ConfigParser(appConfig);
+
+            string language = conf.GetValue("CONFIG", "language");
+
+            var lanConf = new ConfigParser(lanConfig);
+
+            if (translate == "menu") { tb1.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "btn-stop") { buttonStopSTD.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "home") { buttonHome.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "basic") { buttonBasic.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "advanced") { buttonAdvanced.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "settings") { buttonSettings.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "help") { buttonHelp.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "exit") { buttonExit.Text = lanConf.GetValue(language, translate); }
+        }
 
         // Below is the Side Menu Code
         public void loadform(object Form) // The Logic how to open a Form with the Menu on the right and Top
@@ -91,7 +120,7 @@ namespace AutoOffline
 
             TimerManager.StopAllTimers(); // Stop all Timers
 
-            tb1.Text = "Shutdown not set";
+            language("menu");
         }
     }
 }

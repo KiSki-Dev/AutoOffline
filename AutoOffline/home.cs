@@ -21,6 +21,7 @@ namespace AutoOffline
     public partial class home : System.Windows.Forms.Form, ITimerClient
     {
         private string appConfig = Application.StartupPath + @"\config.conf";
+        private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
         int seconds;
         private string username;
         public static home instance;
@@ -32,6 +33,20 @@ namespace AutoOffline
             timerPre.Interval = 1000; // 1 second
 
             TimerManager.RegisterForm(this);
+
+            language("preset");
+        }
+
+        public void language(string translate)
+        {
+            var conf = new ConfigParser(appConfig);
+
+            string language = conf.GetValue("CONFIG", "language");
+
+            var lanConf = new ConfigParser(lanConfig);
+
+            if (translate == "welcome") { labelWelcome.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "preset") { labelPre.Text = lanConf.GetValue(language, translate); }
         }
 
         private void home_FormClosed(object sender, FormClosedEventArgs e)
@@ -44,15 +59,19 @@ namespace AutoOffline
         {
             var conf = new ConfigParser(appConfig);
 
+            var lanConf = new ConfigParser(lanConfig);
+
+            string language = conf.GetValue("CONFIG", "language");
+            string message = lanConf.GetValue(language, "welcome");
             username = conf.GetValue("CONFIG", "username");
             if (username == "automatic")
             {
                 string username = (Environment.UserName);
-                labelWelcome.Text = ("Hello, " + username + "!");
+                labelWelcome.Text = (message + username + "!");
             }
             else if (username != "automatic")
             {
-                labelWelcome.Text = ("Hello, " + username + "!");
+                labelWelcome.Text = (message + username + "!");
             }
 
         }
