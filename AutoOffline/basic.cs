@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Salaros.Configuration;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace AutoOffline
 {
     public partial class basic : System.Windows.Forms.Form, ITimerClient
     {
+        private string appConfig = Application.StartupPath + @"\config.conf";
+        private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
         public static basic instance;
         int time;
         public basic()
@@ -23,6 +26,31 @@ namespace AutoOffline
             timerBasic.Interval = 1000; // 1 second
 
             TimerManager.RegisterForm(this);
+
+            language("sec");
+            language("minute");
+            language("hour");
+            language("day");
+            language("btn-fnsh");
+            language("error");
+            language("error-msg");
+        }
+
+        public void language(string translate)
+        {
+            var conf = new ConfigParser(appConfig);
+
+            string language = conf.GetValue("CONFIG", "language");
+
+            var lanConf = new ConfigParser(lanConfig);
+
+            if (translate == "sec") { labelSec.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "minute") { labelMin.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "hour") { labelHr.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "day") { labelDay.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "btn-fnsh") { buttonFNSH.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "error") { labelError.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "error-msg") { labelErrorMessage.Text = lanConf.GetValue(language, translate); }
         }
 
         private void advanced_FormClosed(object sender, FormClosedEventArgs e)

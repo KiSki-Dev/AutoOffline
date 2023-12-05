@@ -30,8 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             timerBasic = new System.Windows.Forms.Timer(components);
-            richTextBox3 = new RichTextBox();
-            richTextBox2 = new RichTextBox();
             labelError = new Label();
             labelErrorMessage = new Label();
             labelCdown = new Label();
@@ -39,9 +37,11 @@
             tbHr = new RichTextBox();
             tbMin = new RichTextBox();
             tbSec = new RichTextBox();
-            richTextBox1 = new RichTextBox();
-            richTextBoxSec = new RichTextBox();
             buttonFNSH = new Button();
+            labelSec = new Label();
+            labelMin = new Label();
+            labelHr = new Label();
+            labelDay = new Label();
             SuspendLayout();
             // 
             // timerBasic
@@ -50,45 +50,13 @@
             timerBasic.Interval = 1000;
             timerBasic.Tick += timerBasic_Tick;
             // 
-            // richTextBox3
-            // 
-            richTextBox3.BackColor = Color.Gray;
-            richTextBox3.BorderStyle = BorderStyle.None;
-            richTextBox3.Cursor = Cursors.Hand;
-            richTextBox3.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox3.ForeColor = Color.Black;
-            richTextBox3.Location = new Point(271, 235);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.ReadOnly = true;
-            richTextBox3.RightToLeft = RightToLeft.No;
-            richTextBox3.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox3.Size = new Size(100, 28);
-            richTextBox3.TabIndex = 32;
-            richTextBox3.Text = "Days";
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.BackColor = Color.Gray;
-            richTextBox2.BorderStyle = BorderStyle.None;
-            richTextBox2.Cursor = Cursors.Hand;
-            richTextBox2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox2.ForeColor = Color.Black;
-            richTextBox2.Location = new Point(71, 235);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.ReadOnly = true;
-            richTextBox2.RightToLeft = RightToLeft.No;
-            richTextBox2.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox2.Size = new Size(100, 28);
-            richTextBox2.TabIndex = 31;
-            richTextBox2.Text = "Hours";
-            // 
             // labelError
             // 
             labelError.AutoSize = true;
             labelError.BackColor = Color.Red;
             labelError.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelError.ForeColor = Color.White;
-            labelError.Location = new Point(504, 252);
+            labelError.Location = new Point(505, 252);
             labelError.Name = "labelError";
             labelError.Size = new Size(71, 23);
             labelError.TabIndex = 30;
@@ -101,7 +69,7 @@
             labelErrorMessage.BackColor = Color.Red;
             labelErrorMessage.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelErrorMessage.ForeColor = Color.White;
-            labelErrorMessage.Location = new Point(453, 275);
+            labelErrorMessage.Location = new Point(454, 275);
             labelErrorMessage.Name = "labelErrorMessage";
             labelErrorMessage.Size = new Size(177, 25);
             labelErrorMessage.TabIndex = 29;
@@ -179,51 +147,63 @@
             tbSec.TabIndex = 24;
             tbSec.Text = "0";
             // 
-            // richTextBox1
-            // 
-            richTextBox1.BackColor = Color.Gray;
-            richTextBox1.BorderStyle = BorderStyle.None;
-            richTextBox1.Cursor = Cursors.Hand;
-            richTextBox1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox1.ForeColor = Color.Black;
-            richTextBox1.Location = new Point(271, 95);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ReadOnly = true;
-            richTextBox1.RightToLeft = RightToLeft.No;
-            richTextBox1.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox1.Size = new Size(100, 28);
-            richTextBox1.TabIndex = 23;
-            richTextBox1.Text = "Minutes";
-            // 
-            // richTextBoxSec
-            // 
-            richTextBoxSec.BackColor = Color.Gray;
-            richTextBoxSec.BorderStyle = BorderStyle.None;
-            richTextBoxSec.Cursor = Cursors.Hand;
-            richTextBoxSec.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBoxSec.ForeColor = Color.Black;
-            richTextBoxSec.Location = new Point(71, 95);
-            richTextBoxSec.Name = "richTextBoxSec";
-            richTextBoxSec.ReadOnly = true;
-            richTextBoxSec.RightToLeft = RightToLeft.No;
-            richTextBoxSec.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBoxSec.Size = new Size(100, 28);
-            richTextBoxSec.TabIndex = 22;
-            richTextBoxSec.Text = "Seconds";
-            // 
             // buttonFNSH
             // 
             buttonFNSH.BackColor = Color.FromArgb(130, 109, 178);
             buttonFNSH.FlatStyle = FlatStyle.Flat;
             buttonFNSH.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonFNSH.ForeColor = Color.White;
-            buttonFNSH.Location = new Point(462, 169);
+            buttonFNSH.Location = new Point(459, 166);
             buttonFNSH.Name = "buttonFNSH";
-            buttonFNSH.Size = new Size(159, 80);
+            buttonFNSH.Size = new Size(181, 83);
             buttonFNSH.TabIndex = 21;
             buttonFNSH.Text = "Start Shutdown";
             buttonFNSH.UseVisualStyleBackColor = false;
             buttonFNSH.Click += buttonFNSH_Click_1;
+            // 
+            // labelSec
+            // 
+            labelSec.AutoSize = true;
+            labelSec.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSec.ForeColor = Color.White;
+            labelSec.Location = new Point(59, 97);
+            labelSec.Name = "labelSec";
+            labelSec.Size = new Size(109, 25);
+            labelSec.TabIndex = 33;
+            labelSec.Text = "Seconds";
+            // 
+            // labelMin
+            // 
+            labelMin.AutoSize = true;
+            labelMin.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelMin.ForeColor = Color.White;
+            labelMin.Location = new Point(265, 97);
+            labelMin.Name = "labelMin";
+            labelMin.Size = new Size(105, 25);
+            labelMin.TabIndex = 34;
+            labelMin.Text = "Minutes";
+            // 
+            // labelHr
+            // 
+            labelHr.AutoSize = true;
+            labelHr.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelHr.ForeColor = Color.White;
+            labelHr.Location = new Point(59, 237);
+            labelHr.Name = "labelHr";
+            labelHr.Size = new Size(81, 25);
+            labelHr.TabIndex = 35;
+            labelHr.Text = "Hours";
+            // 
+            // labelDay
+            // 
+            labelDay.AutoSize = true;
+            labelDay.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelDay.ForeColor = Color.White;
+            labelDay.Location = new Point(265, 237);
+            labelDay.Name = "labelDay";
+            labelDay.Size = new Size(69, 25);
+            labelDay.TabIndex = 36;
+            labelDay.Text = "Days";
             // 
             // basic
             // 
@@ -232,8 +212,10 @@
             BackColor = Color.Gray;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(800, 450);
-            Controls.Add(richTextBox3);
-            Controls.Add(richTextBox2);
+            Controls.Add(labelDay);
+            Controls.Add(labelHr);
+            Controls.Add(labelMin);
+            Controls.Add(labelSec);
             Controls.Add(labelError);
             Controls.Add(labelErrorMessage);
             Controls.Add(labelCdown);
@@ -241,8 +223,6 @@
             Controls.Add(tbHr);
             Controls.Add(tbMin);
             Controls.Add(tbSec);
-            Controls.Add(richTextBox1);
-            Controls.Add(richTextBoxSec);
             Controls.Add(buttonFNSH);
             FormBorderStyle = FormBorderStyle.None;
             Name = "basic";
@@ -253,8 +233,6 @@
 
         #endregion
         private System.Windows.Forms.Timer timerBasic;
-        private RichTextBox richTextBox3;
-        private RichTextBox richTextBox2;
         private Label labelError;
         private Label labelErrorMessage;
         private Label labelCdown;
@@ -262,8 +240,10 @@
         private RichTextBox tbHr;
         private RichTextBox tbMin;
         private RichTextBox tbSec;
-        private RichTextBox richTextBox1;
-        private RichTextBox richTextBoxSec;
         private Button buttonFNSH;
+        private Label labelSec;
+        private Label labelMin;
+        private Label labelHr;
+        private Label labelDay;
     }
 }
