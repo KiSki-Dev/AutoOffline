@@ -39,7 +39,7 @@
             button5m = new Button();
             timerPre = new System.Windows.Forms.Timer(components);
             labelCdown = new Label();
-            label1 = new Label();
+            labelInfo = new Label();
             labelWelcome = new Label();
             labelPre = new Label();
             panel1.SuspendLayout();
@@ -162,16 +162,17 @@
             labelCdown.Text = "Shutdown not set";
             labelCdown.Visible = false;
             // 
-            // label1
+            // labelInfo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(27, 72);
-            label1.Name = "label1";
-            label1.Size = new Size(372, 368);
-            label1.TabIndex = 7;
-            label1.Text = resources.GetString("label1.Text");
+            labelInfo.AutoSize = true;
+            labelInfo.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelInfo.ForeColor = Color.White;
+            labelInfo.Location = new Point(27, 72);
+            labelInfo.Name = "labelInfo";
+            labelInfo.RightToLeft = RightToLeft.No;
+            labelInfo.Size = new Size(372, 368);
+            labelInfo.TabIndex = 7;
+            labelInfo.Text = resources.GetString("labelInfo.Text");
             // 
             // labelWelcome
             // 
@@ -205,7 +206,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(labelPre);
             Controls.Add(labelWelcome);
-            Controls.Add(label1);
+            Controls.Add(labelInfo);
             Controls.Add(labelCdown);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -226,7 +227,7 @@
         private Button button1h;
         private System.Windows.Forms.Timer timerPre;
         private Label labelCdown;
-        private Label label1;
+        private Label labelInfo;
         private Label labelWelcome;
         private Label labelPre;
     }

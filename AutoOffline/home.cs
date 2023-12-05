@@ -35,6 +35,9 @@ namespace AutoOffline
             TimerManager.RegisterForm(this);
 
             language("preset");
+            language("home-info");
+            language("minute");
+            language("hour");
         }
 
         public void language(string translate)
@@ -45,8 +48,21 @@ namespace AutoOffline
 
             var lanConf = new ConfigParser(lanConfig);
 
-            if (translate == "welcome") { labelWelcome.Text = lanConf.GetValue(language, translate); }
-            else if (translate == "preset") { labelPre.Text = lanConf.GetValue(language, translate); }
+            if (translate == "preset") { labelPre.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "home-info") { labelInfo.Text = $"{lanConf.GetValue(language, translate)}\n\n{lanConf.GetValue(language, "home-info2")}\n{lanConf.GetValue(language, "home-info3")}\n\n" +
+                    $"{lanConf.GetValue(language, "home-info4")}\n{lanConf.GetValue(language, "home-info5")}\n\n{lanConf.GetValue(language, "home-info6")}\n{lanConf.GetValue(language, "home-info7")}\n" +
+                    $"{lanConf.GetValue(language, "home-info8")}\n\n{lanConf.GetValue(language, "home-info9")}\n{lanConf.GetValue(language, "home-info1")}"; }
+            else if (translate == "minute")
+            {   button5m.Text = $"5 {lanConf.GetValue(language, translate)}"; 
+                button10m.Text = $"10 {lanConf.GetValue(language, translate)}"; 
+                button30m.Text = $"30 {lanConf.GetValue(language, translate)}"; 
+            }
+            else if (translate == "hour")
+            {
+                button1h.Text = $"1 {lanConf.GetValue(language, translate)}";
+                button2h.Text = $"2 {lanConf.GetValue(language, translate)}";
+                button4h.Text = $"4 {lanConf.GetValue(language, translate)}";
+            }
         }
 
         private void home_FormClosed(object sender, FormClosedEventArgs e)
