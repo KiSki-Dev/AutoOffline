@@ -39,6 +39,7 @@
             numUpDownHr = new NumUpDown();
             numUpDownMin = new NumUpDown();
             numUpDownSec = new NumUpDown();
+            dateAt = new Label();
             SuspendLayout();
             // 
             // buttonFNSH
@@ -47,9 +48,9 @@
             buttonFNSH.FlatStyle = FlatStyle.Flat;
             buttonFNSH.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonFNSH.ForeColor = Color.White;
-            buttonFNSH.Location = new Point(420, 169);
+            buttonFNSH.Location = new Point(417, 191);
             buttonFNSH.Name = "buttonFNSH";
-            buttonFNSH.Size = new Size(160, 80);
+            buttonFNSH.Size = new Size(181, 83);
             buttonFNSH.TabIndex = 5;
             buttonFNSH.Text = "Start Shutdown";
             buttonFNSH.UseVisualStyleBackColor = false;
@@ -59,7 +60,7 @@
             // 
             labelCdown.AutoSize = true;
             labelCdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCdown.Location = new Point(31, 9);
+            labelCdown.Location = new Point(689, 388);
             labelCdown.Name = "labelCdown";
             labelCdown.Size = new Size(77, 23);
             labelCdown.TabIndex = 16;
@@ -72,7 +73,7 @@
             labelErrorMessage.BackColor = Color.Red;
             labelErrorMessage.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelErrorMessage.ForeColor = Color.White;
-            labelErrorMessage.Location = new Point(405, 282);
+            labelErrorMessage.Location = new Point(407, 307);
             labelErrorMessage.Name = "labelErrorMessage";
             labelErrorMessage.Size = new Size(191, 50);
             labelErrorMessage.TabIndex = 17;
@@ -86,7 +87,7 @@
             labelError.BackColor = Color.Red;
             labelError.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelError.ForeColor = Color.White;
-            labelError.Location = new Point(461, 257);
+            labelError.Location = new Point(463, 282);
             labelError.Name = "labelError";
             labelError.RightToLeft = RightToLeft.No;
             labelError.Size = new Size(78, 25);
@@ -114,7 +115,7 @@
             DatePicker1.CustomFormat = "dd.MM.yyyy";
             DatePicker1.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             DatePicker1.Format = DateTimePickerFormat.Short;
-            DatePicker1.Location = new Point(45, 151);
+            DatePicker1.Location = new Point(45, 177);
             DatePicker1.MaxDate = new DateTime(2100, 12, 31, 0, 0, 0, 0);
             DatePicker1.MinDate = new DateTime(2023, 12, 1, 21, 42, 23, 931);
             DatePicker1.MinimumSize = new Size(0, 35);
@@ -131,7 +132,7 @@
             dateOn.AutoSize = true;
             dateOn.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             dateOn.ForeColor = Color.White;
-            dateOn.Location = new Point(14, 47);
+            dateOn.Location = new Point(14, 40);
             dateOn.Name = "dateOn";
             dateOn.Size = new Size(90, 35);
             dateOn.TabIndex = 29;
@@ -142,7 +143,7 @@
             numUpDownHr.BackColor = Color.Gray;
             numUpDownHr.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownHr.Format = CustomOptions.Hours;
-            numUpDownHr.Location = new Point(55, 233);
+            numUpDownHr.Location = new Point(55, 259);
             numUpDownHr.MinimumSize = new Size(0, 35);
             numUpDownHr.Name = "numUpDownHr";
             numUpDownHr.RepeatDelayMs = 160;
@@ -157,7 +158,7 @@
             numUpDownMin.BackColor = Color.Gray;
             numUpDownMin.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownMin.Format = CustomOptions.Minutes;
-            numUpDownMin.Location = new Point(141, 233);
+            numUpDownMin.Location = new Point(141, 259);
             numUpDownMin.MinimumSize = new Size(0, 35);
             numUpDownMin.Name = "numUpDownMin";
             numUpDownMin.RepeatDelayMs = 110;
@@ -172,7 +173,7 @@
             numUpDownSec.BackColor = Color.Gray;
             numUpDownSec.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownSec.Format = CustomOptions.Seconds;
-            numUpDownSec.Location = new Point(227, 233);
+            numUpDownSec.Location = new Point(227, 259);
             numUpDownSec.MinimumSize = new Size(0, 35);
             numUpDownSec.Name = "numUpDownSec";
             numUpDownSec.RepeatDelayMs = 110;
@@ -182,12 +183,24 @@
             numUpDownSec.Text = "0";
             numUpDownSec.TextChanged += numUpDownSec_TextChanged;
             // 
+            // dateAt
+            // 
+            dateAt.AutoSize = true;
+            dateAt.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dateAt.ForeColor = Color.White;
+            dateAt.Location = new Point(14, 91);
+            dateAt.Name = "dateAt";
+            dateAt.Size = new Size(90, 35);
+            dateAt.TabIndex = 33;
+            dateAt.Text = "Date";
+            // 
             // advanced
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(dateAt);
             Controls.Add(numUpDownSec);
             Controls.Add(numUpDownMin);
             Controls.Add(numUpDownHr);
@@ -221,5 +234,6 @@
         private NumUpDown numUpDownMin;
         private NumUpDown numUpDownSec;
         private Label dateOn;
+        private Label dateAt;
     }
 }

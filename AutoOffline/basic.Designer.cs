@@ -56,7 +56,7 @@
             labelError.BackColor = Color.Red;
             labelError.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelError.ForeColor = Color.White;
-            labelError.Location = new Point(505, 252);
+            labelError.Location = new Point(499, 252);
             labelError.Name = "labelError";
             labelError.Size = new Size(71, 23);
             labelError.TabIndex = 30;
@@ -69,7 +69,7 @@
             labelErrorMessage.BackColor = Color.Red;
             labelErrorMessage.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelErrorMessage.ForeColor = Color.White;
-            labelErrorMessage.Location = new Point(454, 275);
+            labelErrorMessage.Location = new Point(442, 275);
             labelErrorMessage.Name = "labelErrorMessage";
             labelErrorMessage.Size = new Size(177, 25);
             labelErrorMessage.TabIndex = 29;
