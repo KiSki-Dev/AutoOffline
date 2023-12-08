@@ -34,7 +34,7 @@ namespace AutoOffline
 
             if (translate == "btn-fnsh") { buttonFNSH.Text = lanConf.GetValue(language, translate); }
             else if (translate == "error") { labelError.Text = lanConf.GetValue(language, translate); }
-            else if (translate == "error-msg") { labelErrorMessage.Text = ($"{lanConf.GetValue(language, "error-msg2")}\n{lanConf.GetValue(language, "error-msg3")}"); }
+            else if (translate == "error-msg") { labelErrorMessage.Text = (lanConf.GetValue(language, "error-msg2")); }
             else if (translate == "startup")
             {
                 dateOn.Text = ($"{lanConf.GetValue(language, "adv-text")} {DateTime.Now.Day.ToString().PadLeft(2, '0')}.{DateTime.Now.Month.ToString().PadLeft(2, '0')}.{DateTime.Now.Year.ToString().PadLeft(2, '0')}");

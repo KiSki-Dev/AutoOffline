@@ -69,13 +69,12 @@
             // 
             // labelErrorMessage
             // 
-            labelErrorMessage.AutoSize = true;
             labelErrorMessage.BackColor = Color.Red;
             labelErrorMessage.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelErrorMessage.ForeColor = Color.White;
-            labelErrorMessage.Location = new Point(407, 307);
+            labelErrorMessage.Location = new Point(387, 307);
             labelErrorMessage.Name = "labelErrorMessage";
-            labelErrorMessage.Size = new Size(191, 50);
+            labelErrorMessage.Size = new Size(247, 80);
             labelErrorMessage.TabIndex = 17;
             labelErrorMessage.Text = "Time cannot be \r\nin the past\r\n";
             labelErrorMessage.TextAlign = ContentAlignment.MiddleCenter;
@@ -83,14 +82,13 @@
             // 
             // labelError
             // 
-            labelError.AutoSize = true;
             labelError.BackColor = Color.Red;
             labelError.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelError.ForeColor = Color.White;
-            labelError.Location = new Point(463, 282);
+            labelError.Location = new Point(387, 282);
             labelError.Name = "labelError";
             labelError.RightToLeft = RightToLeft.No;
-            labelError.Size = new Size(78, 25);
+            labelError.Size = new Size(247, 25);
             labelError.TabIndex = 18;
             labelError.Text = "Error:";
             labelError.TextAlign = ContentAlignment.MiddleCenter;

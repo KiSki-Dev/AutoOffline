@@ -52,28 +52,28 @@
             // 
             // labelError
             // 
-            labelError.AutoSize = true;
             labelError.BackColor = Color.Red;
             labelError.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelError.ForeColor = Color.White;
-            labelError.Location = new Point(499, 252);
+            labelError.Location = new Point(441, 255);
             labelError.Name = "labelError";
-            labelError.Size = new Size(71, 23);
+            labelError.Size = new Size(215, 23);
             labelError.TabIndex = 30;
             labelError.Text = "Error:";
+            labelError.TextAlign = ContentAlignment.MiddleCenter;
             labelError.Visible = false;
             // 
             // labelErrorMessage
             // 
-            labelErrorMessage.AutoSize = true;
             labelErrorMessage.BackColor = Color.Red;
             labelErrorMessage.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point);
             labelErrorMessage.ForeColor = Color.White;
-            labelErrorMessage.Location = new Point(442, 275);
+            labelErrorMessage.Location = new Point(441, 278);
             labelErrorMessage.Name = "labelErrorMessage";
-            labelErrorMessage.Size = new Size(177, 25);
+            labelErrorMessage.Size = new Size(215, 66);
             labelErrorMessage.TabIndex = 29;
             labelErrorMessage.Text = "Time cant be 0";
+            labelErrorMessage.TextAlign = ContentAlignment.MiddleCenter;
             labelErrorMessage.Visible = false;
             // 
             // labelCdown
