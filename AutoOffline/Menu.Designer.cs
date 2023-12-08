@@ -57,6 +57,7 @@
             buttonHome.FlatAppearance.BorderSize = 0;
             buttonHome.FlatStyle = FlatStyle.Flat;
             buttonHome.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonHome.ForeColor = Color.White;
             buttonHome.Location = new Point(-1, 155);
             buttonHome.Name = "buttonHome";
             buttonHome.Size = new Size(162, 37);
@@ -111,6 +112,7 @@
             buttonExit.FlatAppearance.BorderSize = 0;
             buttonExit.FlatStyle = FlatStyle.Flat;
             buttonExit.Font = new Font("Verdana", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonExit.ForeColor = Color.White;
             buttonExit.Location = new Point(-1, 415);
             buttonExit.Name = "buttonExit";
             buttonExit.Size = new Size(162, 32);
@@ -127,6 +129,7 @@
             buttonHelp.FlatAppearance.BorderSize = 0;
             buttonHelp.FlatStyle = FlatStyle.Flat;
             buttonHelp.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonHelp.ForeColor = Color.White;
             buttonHelp.Location = new Point(-1, 355);
             buttonHelp.Name = "buttonHelp";
             buttonHelp.Size = new Size(162, 37);
@@ -143,6 +146,7 @@
             buttonSettings.FlatAppearance.BorderSize = 0;
             buttonSettings.FlatStyle = FlatStyle.Flat;
             buttonSettings.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonSettings.ForeColor = Color.White;
             buttonSettings.Location = new Point(-1, 305);
             buttonSettings.Name = "buttonSettings";
             buttonSettings.Size = new Size(162, 37);
@@ -159,6 +163,7 @@
             buttonBasic.FlatAppearance.BorderSize = 0;
             buttonBasic.FlatStyle = FlatStyle.Flat;
             buttonBasic.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonBasic.ForeColor = Color.White;
             buttonBasic.Location = new Point(-1, 205);
             buttonBasic.Name = "buttonBasic";
             buttonBasic.Size = new Size(162, 37);
@@ -175,6 +180,7 @@
             buttonAdvanced.FlatAppearance.BorderSize = 0;
             buttonAdvanced.FlatStyle = FlatStyle.Flat;
             buttonAdvanced.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAdvanced.ForeColor = Color.White;
             buttonAdvanced.Location = new Point(-1, 255);
             buttonAdvanced.Name = "buttonAdvanced";
             buttonAdvanced.Size = new Size(162, 37);
@@ -201,10 +207,11 @@
             buttonStopSTD.Cursor = Cursors.Hand;
             buttonStopSTD.FlatAppearance.BorderSize = 0;
             buttonStopSTD.FlatStyle = FlatStyle.Flat;
-            buttonStopSTD.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonStopSTD.Location = new Point(497, 0);
+            buttonStopSTD.Font = new Font("Verdana", 12.75F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonStopSTD.ForeColor = Color.White;
+            buttonStopSTD.Location = new Point(493, -2);
             buttonStopSTD.Name = "buttonStopSTD";
-            buttonStopSTD.Size = new Size(158, 30);
+            buttonStopSTD.Size = new Size(166, 33);
             buttonStopSTD.TabIndex = 4;
             buttonStopSTD.Text = "Stop Shutdown";
             buttonStopSTD.UseVisualStyleBackColor = false;
@@ -229,7 +236,7 @@
             panelMain.Size = new Size(653, 431);
             panelMain.TabIndex = 3;
             // 
-            // Form1
+            // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -241,7 +248,7 @@
             Controls.Add(panelMenuBack);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AutoOffline";
             panelMenuBack.ResumeLayout(false);

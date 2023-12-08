@@ -71,6 +71,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(81, 109);
             label3.Name = "label3";
             label3.Size = new Size(127, 25);
@@ -81,6 +82,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(81, 216);
             label4.Name = "label4";
             label4.Size = new Size(130, 25);
@@ -103,7 +105,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(386, 46);
+            label5.Location = new Point(379, 40);
             label5.Name = "label5";
             label5.Size = new Size(238, 35);
             label5.TabIndex = 19;
@@ -114,6 +116,7 @@
             richTextBox2.BackColor = Color.Gray;
             richTextBox2.BorderStyle = BorderStyle.None;
             richTextBox2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            richTextBox2.ForeColor = Color.White;
             richTextBox2.Location = new Point(379, 99);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.ScrollBars = RichTextBoxScrollBars.None;
@@ -138,6 +141,7 @@
             richTextBox3.BackColor = Color.Gray;
             richTextBox3.BorderStyle = BorderStyle.None;
             richTextBox3.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            richTextBox3.ForeColor = Color.White;
             richTextBox3.Location = new Point(379, 202);
             richTextBox3.Name = "richTextBox3";
             richTextBox3.ScrollBars = RichTextBoxScrollBars.None;
