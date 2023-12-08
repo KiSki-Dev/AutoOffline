@@ -49,9 +49,8 @@ namespace AutoOffline
             var lanConf = new ConfigParser(lanConfig);
 
             if (translate == "preset") { labelPre.Text = lanConf.GetValue(language, translate); }
-            else if (translate == "home-info") { labelInfo.Text = $"{lanConf.GetValue(language, translate)}\n\n{lanConf.GetValue(language, "home-info2")}\n{lanConf.GetValue(language, "home-info3")}\n\n" +
-                    $"{lanConf.GetValue(language, "home-info4")}\n{lanConf.GetValue(language, "home-info5")}\n\n{lanConf.GetValue(language, "home-info6")}\n{lanConf.GetValue(language, "home-info7")}\n" +
-                    $"{lanConf.GetValue(language, "home-info8")}\n\n{lanConf.GetValue(language, "home-info9")}\n{lanConf.GetValue(language, "home-info1")}"; }
+            else if (translate == "home-info") { labelInfo.Text = $"{lanConf.GetValue(language, "home-info1")}\n\n\n{lanConf.GetValue(language, "home-info2")}\n{lanConf.GetValue(language, "home-info3")}\n\n" +
+                    $"{lanConf.GetValue(language, "home-info4")}\n{lanConf.GetValue(language, "home-info5")}\n\n{lanConf.GetValue(language, "home-info6")}\n{lanConf.GetValue(language, "home-info7")}"; }
             else if (translate == "minute")
             {   button5m.Text = $"5 {lanConf.GetValue(language, translate)}"; 
                 button10m.Text = $"10 {lanConf.GetValue(language, translate)}"; 

@@ -164,13 +164,12 @@
             // 
             // labelInfo
             // 
-            labelInfo.AutoSize = true;
-            labelInfo.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelInfo.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelInfo.ForeColor = Color.White;
-            labelInfo.Location = new Point(27, 72);
+            labelInfo.Location = new Point(27, 71);
             labelInfo.Name = "labelInfo";
             labelInfo.RightToLeft = RightToLeft.No;
-            labelInfo.Size = new Size(372, 368);
+            labelInfo.Size = new Size(408, 373);
             labelInfo.TabIndex = 7;
             labelInfo.Text = resources.GetString("labelInfo.Text");
             // 

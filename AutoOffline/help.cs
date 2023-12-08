@@ -22,6 +22,8 @@ namespace AutoOffline
             InitializeComponent();
 
             language("helpTxt");
+            language("github");
+            language("disc");
         }
 
         public void language(string translate)
@@ -33,7 +35,8 @@ namespace AutoOffline
             var lanConf = new ConfigParser(lanConfig);
 
             if (translate == "helpTxt") { labelText.Text = $"{lanConf.GetValue(language, "helpTxt")}\n{lanConf.GetValue(language, "helpTxt2")}\n{lanConf.GetValue(language, "helpTxt3")}\n\n{lanConf.GetValue(language, "helpTxt4")}\n{lanConf.GetValue(language, "helpTxt5")}\n\n{lanConf.GetValue(language, "helpTxt6")}"; }
-            else if (translate == "lan") { linkLabelGit.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "github") { linkLabelGit.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "disc") { linkLabelDisc.Text = lanConf.GetValue(language, translate); }
         }
 
         // Clickable Links
