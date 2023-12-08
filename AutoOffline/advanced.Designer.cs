@@ -47,6 +47,7 @@
             // buttonFNSH
             // 
             buttonFNSH.BackColor = Color.FromArgb(130, 109, 178);
+            buttonFNSH.Cursor = Cursors.Hand;
             buttonFNSH.FlatStyle = FlatStyle.Flat;
             buttonFNSH.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonFNSH.ForeColor = Color.White;
@@ -141,12 +142,13 @@
             // numUpDownHr
             // 
             numUpDownHr.BackColor = Color.Gray;
+            numUpDownHr.Cursor = Cursors.Hand;
             numUpDownHr.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownHr.Format = CustomOptions.Hours;
             numUpDownHr.Location = new Point(55, 259);
             numUpDownHr.MinimumSize = new Size(0, 35);
             numUpDownHr.Name = "numUpDownHr";
-            numUpDownHr.RepeatDelayMs = 160;
+            numUpDownHr.RepeatDelayMs = 150;
             numUpDownHr.Size = new Size(89, 85);
             numUpDownHr.SkinColor = Color.MediumSlateBlue;
             numUpDownHr.TabIndex = 30;
@@ -156,12 +158,13 @@
             // numUpDownMin
             // 
             numUpDownMin.BackColor = Color.Gray;
+            numUpDownMin.Cursor = Cursors.Hand;
             numUpDownMin.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownMin.Format = CustomOptions.Minutes;
             numUpDownMin.Location = new Point(141, 259);
             numUpDownMin.MinimumSize = new Size(0, 35);
             numUpDownMin.Name = "numUpDownMin";
-            numUpDownMin.RepeatDelayMs = 110;
+            numUpDownMin.RepeatDelayMs = 100;
             numUpDownMin.Size = new Size(89, 85);
             numUpDownMin.SkinColor = Color.MediumSlateBlue;
             numUpDownMin.TabIndex = 31;
@@ -171,12 +174,13 @@
             // numUpDownSec
             // 
             numUpDownSec.BackColor = Color.Gray;
+            numUpDownSec.Cursor = Cursors.Hand;
             numUpDownSec.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownSec.Format = CustomOptions.Seconds;
             numUpDownSec.Location = new Point(227, 259);
             numUpDownSec.MinimumSize = new Size(0, 35);
             numUpDownSec.Name = "numUpDownSec";
-            numUpDownSec.RepeatDelayMs = 110;
+            numUpDownSec.RepeatDelayMs = 90;
             numUpDownSec.Size = new Size(89, 85);
             numUpDownSec.SkinColor = Color.MediumSlateBlue;
             numUpDownSec.TabIndex = 32;

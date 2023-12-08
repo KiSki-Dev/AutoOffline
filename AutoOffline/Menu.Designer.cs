@@ -86,7 +86,7 @@
             // 
             textBoxSTDI.BackColor = Color.FromArgb(64, 64, 64);
             textBoxSTDI.BorderStyle = BorderStyle.None;
-            textBoxSTDI.Location = new Point(0, 0);
+            textBoxSTDI.Location = new Point(-1, 0);
             textBoxSTDI.Name = "textBoxSTDI";
             textBoxSTDI.ReadOnly = true;
             textBoxSTDI.Size = new Size(10, 16);
@@ -248,6 +248,7 @@
             Controls.Add(panelMenuBack);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AutoOffline";

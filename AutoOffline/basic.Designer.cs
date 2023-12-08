@@ -150,6 +150,7 @@
             // buttonFNSH
             // 
             buttonFNSH.BackColor = Color.FromArgb(130, 109, 178);
+            buttonFNSH.Cursor = Cursors.Hand;
             buttonFNSH.FlatStyle = FlatStyle.Flat;
             buttonFNSH.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonFNSH.ForeColor = Color.White;
@@ -163,47 +164,47 @@
             // 
             // labelSec
             // 
-            labelSec.AutoSize = true;
             labelSec.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelSec.ForeColor = Color.White;
-            labelSec.Location = new Point(59, 97);
+            labelSec.Location = new Point(38, 97);
             labelSec.Name = "labelSec";
-            labelSec.Size = new Size(109, 25);
+            labelSec.Size = new Size(163, 25);
             labelSec.TabIndex = 33;
             labelSec.Text = "Seconds";
+            labelSec.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelMin
             // 
-            labelMin.AutoSize = true;
             labelMin.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelMin.ForeColor = Color.White;
-            labelMin.Location = new Point(265, 97);
+            labelMin.Location = new Point(237, 97);
             labelMin.Name = "labelMin";
-            labelMin.Size = new Size(105, 25);
+            labelMin.Size = new Size(168, 25);
             labelMin.TabIndex = 34;
             labelMin.Text = "Minutes";
+            labelMin.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelHr
             // 
-            labelHr.AutoSize = true;
             labelHr.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelHr.ForeColor = Color.White;
-            labelHr.Location = new Point(59, 237);
+            labelHr.Location = new Point(38, 237);
             labelHr.Name = "labelHr";
-            labelHr.Size = new Size(81, 25);
+            labelHr.Size = new Size(163, 25);
             labelHr.TabIndex = 35;
             labelHr.Text = "Hours";
+            labelHr.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelDay
             // 
-            labelDay.AutoSize = true;
             labelDay.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelDay.ForeColor = Color.White;
-            labelDay.Location = new Point(265, 237);
+            labelDay.Location = new Point(237, 237);
             labelDay.Name = "labelDay";
-            labelDay.Size = new Size(69, 25);
+            labelDay.Size = new Size(168, 25);
             labelDay.TabIndex = 36;
             labelDay.Text = "Days";
+            labelDay.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // basic
             // 

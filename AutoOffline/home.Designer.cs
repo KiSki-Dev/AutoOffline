@@ -62,6 +62,7 @@
             // button4h
             // 
             button4h.BackColor = Color.FromArgb(130, 109, 178);
+            button4h.Cursor = Cursors.Hand;
             button4h.FlatStyle = FlatStyle.Flat;
             button4h.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4h.ForeColor = Color.White;
@@ -76,6 +77,7 @@
             // button2h
             // 
             button2h.BackColor = Color.FromArgb(130, 109, 178);
+            button2h.Cursor = Cursors.Hand;
             button2h.FlatStyle = FlatStyle.Flat;
             button2h.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2h.ForeColor = Color.White;
@@ -90,6 +92,7 @@
             // button1h
             // 
             button1h.BackColor = Color.FromArgb(130, 109, 178);
+            button1h.Cursor = Cursors.Hand;
             button1h.FlatStyle = FlatStyle.Flat;
             button1h.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1h.ForeColor = Color.White;
@@ -104,6 +107,7 @@
             // button30m
             // 
             button30m.BackColor = Color.FromArgb(130, 109, 178);
+            button30m.Cursor = Cursors.Hand;
             button30m.FlatStyle = FlatStyle.Flat;
             button30m.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button30m.ForeColor = Color.White;
@@ -118,6 +122,7 @@
             // button10m
             // 
             button10m.BackColor = Color.FromArgb(130, 109, 178);
+            button10m.Cursor = Cursors.Hand;
             button10m.FlatStyle = FlatStyle.Flat;
             button10m.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button10m.ForeColor = Color.White;
@@ -132,6 +137,7 @@
             // button5m
             // 
             button5m.BackColor = Color.FromArgb(130, 109, 178);
+            button5m.Cursor = Cursors.Hand;
             button5m.FlatStyle = FlatStyle.Flat;
             button5m.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5m.ForeColor = Color.White;
@@ -175,24 +181,23 @@
             // 
             // labelWelcome
             // 
-            labelWelcome.AutoSize = true;
             labelWelcome.FlatStyle = FlatStyle.Flat;
             labelWelcome.Font = new Font("Verdana", 24F, FontStyle.Bold, GraphicsUnit.Point);
             labelWelcome.ForeColor = Color.White;
             labelWelcome.Location = new Point(27, 22);
             labelWelcome.Name = "labelWelcome";
-            labelWelcome.Size = new Size(227, 38);
+            labelWelcome.Size = new Size(588, 38);
             labelWelcome.TabIndex = 8;
             labelWelcome.Text = "Hello, User!";
+            labelWelcome.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // labelPre
             // 
-            labelPre.AutoSize = true;
             labelPre.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
             labelPre.ForeColor = Color.White;
-            labelPre.Location = new Point(478, 118);
+            labelPre.Location = new Point(444, 118);
             labelPre.Name = "labelPre";
-            labelPre.Size = new Size(114, 29);
+            labelPre.Size = new Size(200, 28);
             labelPre.TabIndex = 9;
             labelPre.Text = "Presets";
             labelPre.TextAlign = ContentAlignment.MiddleCenter;
