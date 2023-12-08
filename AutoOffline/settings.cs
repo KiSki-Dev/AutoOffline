@@ -66,7 +66,12 @@ namespace AutoOffline
             }
             else if (language == "Spanish")
             {
-                conf.SetValue("CONFIG", "language", "es");
+                conf.SetValue("CONFIG", "language", "en"); // Change if Spanish is avaible
+                conf.Save();
+            }
+            else if (language == "Russian")
+            {
+                conf.SetValue("CONFIG", "language", "ru"); // Change if Spanish is avaible
                 conf.Save();
             }
         }

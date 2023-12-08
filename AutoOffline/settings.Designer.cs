@@ -61,7 +61,7 @@
             comboBoxLan.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             comboBoxLan.ForeColor = Color.Black;
             comboBoxLan.FormattingEnabled = true;
-            comboBoxLan.Items.AddRange(new object[] { "English", "German", "Spanish" });
+            comboBoxLan.Items.AddRange(new object[] { "English", "German", "Russian", "Spanish (Soon)" });
             comboBoxLan.Location = new Point(42, 144);
             comboBoxLan.Name = "comboBoxLan";
             comboBoxLan.Size = new Size(193, 33);
