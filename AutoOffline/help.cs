@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Salaros.Configuration;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,26 @@ namespace AutoOffline
 {
     public partial class help : System.Windows.Forms.Form
     {
+        private string appConfig = Application.StartupPath + @"\config.conf";
+        private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
+
         public help()
         {
             InitializeComponent();
+
+            language("helpTxt");
+        }
+
+        public void language(string translate)
+        {
+            var conf = new ConfigParser(appConfig);
+
+            string language = conf.GetValue("CONFIG", "language");
+
+            var lanConf = new ConfigParser(lanConfig);
+
+            if (translate == "helpTxt") { labelText.Text = $"{lanConf.GetValue(language, "helpTxt")}\n{lanConf.GetValue(language, "helpTxt2")}\n{lanConf.GetValue(language, "helpTxt3")}\n\n{lanConf.GetValue(language, "helpTxt4")}\n{lanConf.GetValue(language, "helpTxt5")}\n\n{lanConf.GetValue(language, "helpTxt6")}"; }
+            else if (translate == "lan") { linkLabelGit.Text = lanConf.GetValue(language, translate); }
         }
 
         // Clickable Links

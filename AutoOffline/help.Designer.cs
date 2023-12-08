@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(help));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            linkLabel1 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
-            label1 = new Label();
+            linkLabelDisc = new LinkLabel();
+            linkLabelGit = new LinkLabel();
+            labelText = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -42,7 +42,7 @@
             // 
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Image = Properties.Resources.github;
-            pictureBox1.Location = new Point(49, 303);
+            pictureBox1.Location = new Point(49, 301);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(48, 48);
             pictureBox1.TabIndex = 1;
@@ -53,50 +53,50 @@
             // 
             pictureBox2.Cursor = Cursors.Hand;
             pictureBox2.Image = Properties.Resources.discord_small;
-            pictureBox2.Location = new Point(49, 375);
+            pictureBox2.Location = new Point(49, 373);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(48, 48);
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             pictureBox2.Click += pictureBox2_Click;
             // 
-            // linkLabel1
+            // linkLabelDisc
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Cursor = Cursors.Hand;
-            linkLabel1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel1.Location = new Point(113, 387);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(204, 23);
-            linkLabel1.TabIndex = 3;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "My Discord Server";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            linkLabelDisc.AutoSize = true;
+            linkLabelDisc.Cursor = Cursors.Hand;
+            linkLabelDisc.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabelDisc.Location = new Point(113, 385);
+            linkLabelDisc.Name = "linkLabelDisc";
+            linkLabelDisc.Size = new Size(204, 23);
+            linkLabelDisc.TabIndex = 3;
+            linkLabelDisc.TabStop = true;
+            linkLabelDisc.Text = "My Discord Server";
+            linkLabelDisc.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // linkLabel2
+            // linkLabelGit
             // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Cursor = Cursors.Hand;
-            linkLabel2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel2.Location = new Point(113, 316);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(181, 23);
-            linkLabel2.TabIndex = 4;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "My GitHub Page";
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            linkLabelGit.AutoSize = true;
+            linkLabelGit.Cursor = Cursors.Hand;
+            linkLabelGit.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabelGit.Location = new Point(113, 314);
+            linkLabelGit.Name = "linkLabelGit";
+            linkLabelGit.Size = new Size(181, 23);
+            linkLabelGit.TabIndex = 4;
+            linkLabelGit.TabStop = true;
+            linkLabelGit.Text = "My GitHub Page";
+            linkLabelGit.LinkClicked += linkLabel2_LinkClicked;
             // 
-            // label1
+            // labelText
             // 
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(27, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(641, 250);
-            label1.TabIndex = 5;
-            label1.Text = resources.GetString("label1.Text");
+            labelText.FlatStyle = FlatStyle.Flat;
+            labelText.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelText.ForeColor = Color.White;
+            labelText.Location = new Point(12, 8);
+            labelText.Name = "labelText";
+            labelText.Size = new Size(655, 282);
+            labelText.TabIndex = 5;
+            labelText.Text = resources.GetString("labelText.Text");
+            labelText.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // help
             // 
@@ -104,9 +104,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
-            Controls.Add(linkLabel2);
-            Controls.Add(linkLabel1);
+            Controls.Add(labelText);
+            Controls.Add(linkLabelGit);
+            Controls.Add(linkLabelDisc);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
@@ -121,8 +121,8 @@
         #endregion
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private LinkLabel linkLabel1;
-        private LinkLabel linkLabel2;
-        private Label label1;
+        private LinkLabel linkLabelDisc;
+        private LinkLabel linkLabelGit;
+        private Label labelText;
     }
 }
