@@ -86,21 +86,56 @@ namespace AutoOffline
             {
                 conf.SetValue("CONFIG", "language", "de");
                 conf.Save();
+
+                string message = "Please restart AutoOffline to change the Language.";
+                string title = "Restart AutoOffline";
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    conf.SetValue("CONFIG", "language", "de");
+                    conf.Save();
+                    Application.Restart();
+                }
             }
             else if (language == "English")
             {
-                conf.SetValue("CONFIG", "language", "en");
-                conf.Save();
+                string message = "Please restart AutoOffline to change the Language.";
+                string title = "Restart AutoOffline";
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    conf.SetValue("CONFIG", "language", "en");
+                    conf.Save();
+                    Application.Restart();
+                }
             }
             else if (language == "Spanish")
             {
-                conf.SetValue("CONFIG", "language", "en"); // Change if Spanish is avaible
-                conf.Save();
+                string message = "Please restart AutoOffline to change the Language.";
+                string title = "Restart AutoOffline";
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    conf.SetValue("CONFIG", "language", "en");
+                    conf.Save();
+                    Application.Restart();
+                }
             }
             else if (language == "Russian")
             {
-                conf.SetValue("CONFIG", "language", "ru"); // Change if Spanish is avaible
-                conf.Save();
+                string message = "Please restart AutoOffline to change the Language.";
+                string title = "Restart AutoOffline";
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK)
+                {
+                    conf.SetValue("CONFIG", "language", "ru");
+                    conf.Save();
+                    Application.Restart();
+                }
             }
         }
 
