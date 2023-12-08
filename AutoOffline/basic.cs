@@ -53,11 +53,10 @@ namespace AutoOffline
             else if (translate == "error-msg") { labelErrorMessage.Text = lanConf.GetValue(language, translate); }
         }
 
-        private void advanced_FormClosed(object sender, FormClosedEventArgs e)
+        private void basic_FormClosed(object sender, FormClosedEventArgs e)
         {
             // Unregister this form from the TimerManager when it is closed
             TimerManager.UnregisterForm(this);
-
         }
 
         public void StartTimer(int time)
@@ -103,6 +102,9 @@ namespace AutoOffline
 
         private void timerBasic_Tick(object sender, EventArgs e)
         {
+            var conf = new ConfigParser(appConfig);
+            string language = conf.GetValue("CONFIG", "language");
+            var lanConf = new ConfigParser(lanConfig);
             if (time < 1) // If Timer hits 0 it turns the Timer off and prints "Shutdown not set"
             {
             }
@@ -111,14 +113,14 @@ namespace AutoOffline
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"dd\:hh\:mm\:ss");
                 labelCdown.Text = str;
-                Menu.instance.tb1.Text = ("Shutdown in: " + str);
+                Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
             else
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"hh\:mm\:ss");
                 labelCdown.Text = str;
-                Menu.instance.tb1.Text = ("Shutdown in: " + str);
+                Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
 
         }

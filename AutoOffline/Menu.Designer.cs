@@ -219,14 +219,14 @@
             // 
             // labelCountdown
             // 
-            labelCountdown.AutoSize = true;
             labelCountdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelCountdown.ForeColor = Color.White;
-            labelCountdown.Location = new Point(16, 4);
+            labelCountdown.Location = new Point(16, 0);
             labelCountdown.Name = "labelCountdown";
-            labelCountdown.Size = new Size(203, 23);
+            labelCountdown.Size = new Size(471, 31);
             labelCountdown.TabIndex = 0;
             labelCountdown.Text = "Shutdown not set";
+            labelCountdown.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panelMain
             // 

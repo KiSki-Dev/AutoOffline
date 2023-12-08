@@ -150,6 +150,9 @@ namespace AutoOffline
 
         private void timerPre_Tick(object sender, EventArgs e) // Timer
         {
+            var conf = new ConfigParser(appConfig);
+            string language = conf.GetValue("CONFIG", "language");
+            var lanConf = new ConfigParser(lanConfig);
             // If the Timer is above 0 it normally works
             if (seconds < 1) // If Timer hits 0 it turns the Timer off and prints "Shutdown not set"
             {
@@ -159,7 +162,7 @@ namespace AutoOffline
                 TimeSpan time = TimeSpan.FromSeconds(seconds--);
                 string str = time.ToString(@"hh\:mm\:ss");
                 labelCdown.Text = str;
-                Menu.instance.tb1.Text = ("Shutdown in: " + str);
+                Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
 
         }
