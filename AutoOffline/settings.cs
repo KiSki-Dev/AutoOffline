@@ -18,11 +18,39 @@ namespace AutoOffline
     public partial class settings : System.Windows.Forms.Form
     {
         private string appConfig = Application.StartupPath + @"\config.conf";
+        private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
         private string username;
 
         public settings()
         {
             InitializeComponent();
+
+            language("conf");
+            language("lan");
+            language("usr");
+            language("fea");
+            language("feaTxt1");
+            language("feaTxt2");
+            language("feaTxt3");
+            language("feaTxt4");
+        }
+
+        public void language(string translate)
+        {
+            var conf = new ConfigParser(appConfig);
+
+            string language = conf.GetValue("CONFIG", "language");
+
+            var lanConf = new ConfigParser(lanConfig);
+
+            if (translate == "conf") { labelCon.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "lan") { labelLan.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "usr") { labelUsr.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "fea") { labelFea.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "feaTxt1") { labelNFeaText.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "feaTxt2") { labelNFeaText2.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "feaTxt3") { labelNFeaText3.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "feaTxt4") { linkLabelNFeaText.Text = lanConf.GetValue(language, translate); }
         }
 
         // Clickable Links

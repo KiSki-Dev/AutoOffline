@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new Label();
+            labelCon = new Label();
             comboBoxLan = new ComboBox();
-            label3 = new Label();
-            label4 = new Label();
+            labelLan = new Label();
+            labelUsr = new Label();
             richTextBoxUsr = new RichTextBox();
-            label5 = new Label();
-            richTextBox2 = new RichTextBox();
+            labelFea = new Label();
             linkLabel1 = new LinkLabel();
-            richTextBox3 = new RichTextBox();
-            linkLabel2 = new LinkLabel();
+            linkLabelNFeaText = new LinkLabel();
             buttonUsr = new Button();
             buttonLan = new Button();
+            labelNFeaText = new Label();
+            labelNFeaText2 = new Label();
+            labelNFeaText3 = new Label();
             SuspendLayout();
             // 
-            // label2
+            // labelCon
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(96, 40);
-            label2.Name = "label2";
-            label2.Size = new Size(143, 42);
-            label2.TabIndex = 3;
-            label2.Text = "Config";
+            labelCon.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelCon.ForeColor = Color.White;
+            labelCon.Location = new Point(31, 40);
+            labelCon.Name = "labelCon";
+            labelCon.Size = new Size(251, 53);
+            labelCon.TabIndex = 3;
+            labelCon.Text = "Config";
+            labelCon.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // comboBoxLan
             // 
@@ -62,73 +63,62 @@
             comboBoxLan.ForeColor = Color.Black;
             comboBoxLan.FormattingEnabled = true;
             comboBoxLan.Items.AddRange(new object[] { "English", "German", "Russian", "Spanish (Soon)" });
-            comboBoxLan.Location = new Point(42, 144);
+            comboBoxLan.Location = new Point(31, 185);
             comboBoxLan.Name = "comboBoxLan";
             comboBoxLan.Size = new Size(193, 33);
             comboBoxLan.TabIndex = 4;
             // 
-            // label3
+            // labelLan
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(81, 109);
-            label3.Name = "label3";
-            label3.Size = new Size(127, 25);
-            label3.TabIndex = 14;
-            label3.Text = "Language";
+            labelLan.AutoSize = true;
+            labelLan.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelLan.ForeColor = Color.White;
+            labelLan.Location = new Point(31, 144);
+            labelLan.Name = "labelLan";
+            labelLan.Size = new Size(127, 25);
+            labelLan.TabIndex = 14;
+            labelLan.Text = "Language";
             // 
-            // label4
+            // labelUsr
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(81, 216);
-            label4.Name = "label4";
-            label4.Size = new Size(130, 25);
-            label4.TabIndex = 16;
-            label4.Text = "Username";
+            labelUsr.AutoSize = true;
+            labelUsr.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelUsr.ForeColor = Color.White;
+            labelUsr.Location = new Point(31, 250);
+            labelUsr.Name = "labelUsr";
+            labelUsr.Size = new Size(130, 25);
+            labelUsr.TabIndex = 16;
+            labelUsr.Text = "Username";
             // 
             // richTextBoxUsr
             // 
             richTextBoxUsr.BackColor = Color.Gainsboro;
             richTextBoxUsr.BorderStyle = BorderStyle.None;
             richTextBoxUsr.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBoxUsr.Location = new Point(42, 247);
+            richTextBoxUsr.Location = new Point(31, 287);
+            richTextBoxUsr.Multiline = false;
             richTextBoxUsr.Name = "richTextBoxUsr";
+            richTextBoxUsr.ScrollBars = RichTextBoxScrollBars.None;
             richTextBoxUsr.Size = new Size(193, 33);
             richTextBoxUsr.TabIndex = 17;
             richTextBoxUsr.Text = "";
             // 
-            // label5
+            // labelFea
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(379, 40);
-            label5.Name = "label5";
-            label5.Size = new Size(238, 35);
-            label5.TabIndex = 19;
-            label5.Text = "New Features";
-            // 
-            // richTextBox2
-            // 
-            richTextBox2.BackColor = Color.Gray;
-            richTextBox2.BorderStyle = BorderStyle.None;
-            richTextBox2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox2.ForeColor = Color.White;
-            richTextBox2.Location = new Point(379, 99);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox2.Size = new Size(273, 78);
-            richTextBox2.TabIndex = 20;
-            richTextBox2.Text = "If you want to test out new Features,\nyou can apply on my";
+            labelFea.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelFea.ForeColor = Color.White;
+            labelFea.Location = new Point(329, 49);
+            labelFea.Name = "labelFea";
+            labelFea.Size = new Size(308, 69);
+            labelFea.TabIndex = 19;
+            labelFea.Text = "New Features";
+            labelFea.TextAlign = ContentAlignment.TopCenter;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel1.Location = new Point(377, 174);
+            linkLabel1.Location = new Point(356, 214);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(167, 23);
             linkLabel1.TabIndex = 21;
@@ -136,38 +126,25 @@
             linkLabel1.Text = "Discord Server";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
-            // richTextBox3
+            // linkLabelNFeaText
             // 
-            richTextBox3.BackColor = Color.Gray;
-            richTextBox3.BorderStyle = BorderStyle.None;
-            richTextBox3.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBox3.ForeColor = Color.White;
-            richTextBox3.Location = new Point(379, 202);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox3.Size = new Size(273, 96);
-            richTextBox3.TabIndex = 22;
-            richTextBox3.Text = "for Beta-Tester.\n\nOr wait until they\nrelease on my";
-            // 
-            // linkLabel2
-            // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            linkLabel2.Location = new Point(377, 300);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(252, 23);
-            linkLabel2.TabIndex = 23;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "GitHub for AutoOffline";
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
+            linkLabelNFeaText.AutoSize = true;
+            linkLabelNFeaText.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabelNFeaText.Location = new Point(356, 366);
+            linkLabelNFeaText.Name = "linkLabelNFeaText";
+            linkLabelNFeaText.Size = new Size(252, 23);
+            linkLabelNFeaText.TabIndex = 23;
+            linkLabelNFeaText.TabStop = true;
+            linkLabelNFeaText.Text = "GitHub for AutoOffline";
+            linkLabelNFeaText.LinkClicked += linkLabel2_LinkClicked;
             // 
             // buttonUsr
             // 
             buttonUsr.BackColor = Color.FromArgb(130, 109, 178);
             buttonUsr.FlatStyle = FlatStyle.Flat;
             buttonUsr.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonUsr.ForeColor = Color.Black;
-            buttonUsr.Location = new Point(240, 247);
+            buttonUsr.ForeColor = Color.White;
+            buttonUsr.Location = new Point(229, 287);
             buttonUsr.Name = "buttonUsr";
             buttonUsr.Size = new Size(53, 33);
             buttonUsr.TabIndex = 24;
@@ -180,8 +157,8 @@
             buttonLan.BackColor = Color.FromArgb(130, 109, 178);
             buttonLan.FlatStyle = FlatStyle.Flat;
             buttonLan.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonLan.ForeColor = Color.Black;
-            buttonLan.Location = new Point(240, 144);
+            buttonLan.ForeColor = Color.White;
+            buttonLan.Location = new Point(229, 185);
             buttonLan.Name = "buttonLan";
             buttonLan.Size = new Size(53, 33);
             buttonLan.TabIndex = 25;
@@ -189,24 +166,57 @@
             buttonLan.UseVisualStyleBackColor = false;
             buttonLan.Click += buttonLan_Click;
             // 
+            // labelNFeaText
+            // 
+            labelNFeaText.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNFeaText.ForeColor = Color.White;
+            labelNFeaText.Location = new Point(356, 103);
+            labelNFeaText.Name = "labelNFeaText";
+            labelNFeaText.Size = new Size(292, 111);
+            labelNFeaText.TabIndex = 26;
+            labelNFeaText.Text = "If you want to test out new Features,\r\nyou can apply on my";
+            labelNFeaText.TextAlign = ContentAlignment.BottomLeft;
+            // 
+            // labelNFeaText2
+            // 
+            labelNFeaText2.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNFeaText2.ForeColor = Color.White;
+            labelNFeaText2.Location = new Point(356, 237);
+            labelNFeaText2.Name = "labelNFeaText2";
+            labelNFeaText2.Size = new Size(281, 46);
+            labelNFeaText2.TabIndex = 27;
+            labelNFeaText2.Text = "for Beta-Tester.";
+            // 
+            // labelNFeaText3
+            // 
+            labelNFeaText3.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelNFeaText3.ForeColor = Color.White;
+            labelNFeaText3.Location = new Point(356, 280);
+            labelNFeaText3.Name = "labelNFeaText3";
+            labelNFeaText3.Size = new Size(270, 86);
+            labelNFeaText3.TabIndex = 28;
+            labelNFeaText3.Text = "Or wait until they\r\nrelease on my";
+            labelNFeaText3.TextAlign = ContentAlignment.BottomLeft;
+            // 
             // settings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelNFeaText3);
+            Controls.Add(labelNFeaText2);
+            Controls.Add(labelNFeaText);
             Controls.Add(buttonLan);
             Controls.Add(buttonUsr);
-            Controls.Add(linkLabel2);
+            Controls.Add(linkLabelNFeaText);
             Controls.Add(linkLabel1);
-            Controls.Add(richTextBox2);
-            Controls.Add(label5);
+            Controls.Add(labelFea);
             Controls.Add(richTextBoxUsr);
-            Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(labelUsr);
+            Controls.Add(labelLan);
             Controls.Add(comboBoxLan);
-            Controls.Add(label2);
-            Controls.Add(richTextBox3);
+            Controls.Add(labelCon);
             FormBorderStyle = FormBorderStyle.None;
             Name = "settings";
             Text = "settings";
@@ -215,17 +225,18 @@
         }
 
         #endregion
-        private Label label2;
+        private Label labelCon;
         private ComboBox comboBoxLan;
-        private Label label3;
-        private Label label4;
+        private Label labelLan;
+        private Label labelUsr;
         private RichTextBox richTextBoxUsr;
-        private Label label5;
-        private RichTextBox richTextBox2;
+        private Label labelFea;
         private LinkLabel linkLabel1;
-        private RichTextBox richTextBox3;
-        private LinkLabel linkLabel2;
+        private LinkLabel linkLabelNFeaText;
         private Button buttonUsr;
         private Button buttonLan;
+        private Label labelNFeaText;
+        private Label labelNFeaText2;
+        private Label labelNFeaText3;
     }
 }
