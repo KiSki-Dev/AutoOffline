@@ -35,11 +35,13 @@
             labelError = new Label();
             timerAdv = new System.Windows.Forms.Timer(components);
             DatePicker1 = new DatePicker();
-            dateOn = new Label();
+            dateTextOn = new Label();
             numUpDownHr = new NumUpDown();
             numUpDownMin = new NumUpDown();
             numUpDownSec = new NumUpDown();
             dateAt = new Label();
+            dateOn = new Label();
+            dateTextAt = new Label();
             SuspendLayout();
             // 
             // buttonFNSH
@@ -125,16 +127,16 @@
             DatePicker1.Value = new DateTime(2023, 12, 1, 21, 42, 23, 932);
             DatePicker1.ValueChanged += DatePicker1_ValueChanged;
             // 
-            // dateOn
+            // dateTextOn
             // 
-            dateOn.AutoSize = true;
-            dateOn.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            dateOn.ForeColor = Color.White;
-            dateOn.Location = new Point(14, 40);
-            dateOn.Name = "dateOn";
-            dateOn.Size = new Size(90, 35);
-            dateOn.TabIndex = 29;
-            dateOn.Text = "Date";
+            dateTextOn.AutoSize = true;
+            dateTextOn.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dateTextOn.ForeColor = Color.White;
+            dateTextOn.Location = new Point(75, 40);
+            dateTextOn.Name = "dateTextOn";
+            dateTextOn.Size = new Size(231, 35);
+            dateTextOn.TabIndex = 29;
+            dateTextOn.Text = "Shutdown on";
             // 
             // numUpDownHr
             // 
@@ -183,14 +185,36 @@
             // 
             // dateAt
             // 
-            dateAt.AutoSize = true;
             dateAt.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             dateAt.ForeColor = Color.White;
-            dateAt.Location = new Point(14, 91);
+            dateAt.Location = new Point(299, 99);
             dateAt.Name = "dateAt";
-            dateAt.Size = new Size(90, 35);
+            dateAt.Size = new Size(234, 35);
             dateAt.TabIndex = 33;
-            dateAt.Text = "Date";
+            dateAt.Text = "00.00.00";
+            dateAt.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // dateOn
+            // 
+            dateOn.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dateOn.ForeColor = Color.White;
+            dateOn.Location = new Point(299, 40);
+            dateOn.Name = "dateOn";
+            dateOn.Size = new Size(234, 51);
+            dateOn.TabIndex = 34;
+            dateOn.Text = "00.00.0000";
+            // 
+            // dateTextAt
+            // 
+            dateTextAt.AutoSize = true;
+            dateTextAt.Font = new Font("Verdana", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            dateTextAt.ForeColor = Color.White;
+            dateTextAt.Location = new Point(259, 99);
+            dateTextAt.Name = "dateTextAt";
+            dateTextAt.Size = new Size(47, 35);
+            dateTextAt.TabIndex = 35;
+            dateTextAt.Text = "at";
+            dateTextAt.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // advanced
             // 
@@ -198,11 +222,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(800, 450);
+            Controls.Add(dateTextAt);
+            Controls.Add(dateOn);
             Controls.Add(dateAt);
             Controls.Add(numUpDownSec);
             Controls.Add(numUpDownMin);
             Controls.Add(numUpDownHr);
-            Controls.Add(dateOn);
+            Controls.Add(dateTextOn);
             Controls.Add(DatePicker1);
             Controls.Add(labelError);
             Controls.Add(labelErrorMessage);
@@ -231,7 +257,9 @@
         private NumUpDown numUpDownHr;
         private NumUpDown numUpDownMin;
         private NumUpDown numUpDownSec;
-        private Label dateOn;
+        private Label dateTextOn;
         private Label dateAt;
+        private Label dateOn;
+        private Label dateTextAt;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Salaros.Configuration;
 using System.Diagnostics;
+using System.Drawing;
 
 
 namespace AutoOffline
@@ -22,6 +23,8 @@ namespace AutoOffline
             language("error");
             language("error-msg");
             language("startup");
+
+            autoPlace();
         }
 
         public void language(string translate)
@@ -37,9 +40,18 @@ namespace AutoOffline
             else if (translate == "error-msg") { labelErrorMessage.Text = (lanConf.GetValue(language, "error-msg2")); }
             else if (translate == "startup")
             {
-                dateOn.Text = ($"{lanConf.GetValue(language, "adv-text")} {DateTime.Now.Day.ToString().PadLeft(2, '0')}.{DateTime.Now.Month.ToString().PadLeft(2, '0')}.{DateTime.Now.Year.ToString().PadLeft(2, '0')}");
-                dateAt.Text = ($"{lanConf.GetValue(language, "adv-text2")} {DateTime.Now.Hour.ToString().PadLeft(2, '0')}:{DateTime.Now.Minute.ToString().PadLeft(2, '0')}:{DateTime.Now.Second.ToString().PadLeft(2, '0')}");
+                dateTextOn.Text = lanConf.GetValue(language, "adv-text");
+                dateTextAt.Text = lanConf.GetValue(language, "adv-text2");
+                dateOn.Text = $"{DateTime.Now.Day.ToString().PadLeft(2, '0')}.{DateTime.Now.Month.ToString().PadLeft(2, '0')}.{DateTime.Now.Year.ToString().PadLeft(2, '0')}";
+                dateAt.Text = $"{DateTime.Now.Hour.ToString().PadLeft(2, '0')}:{DateTime.Now.Minute.ToString().PadLeft(2, '0')}:{DateTime.Now.Second.ToString().PadLeft(2, '0')}";
             }
+        }
+
+        public void autoPlace()
+        {
+            dateOn.Location = new Point(dateTextOn.Location.X + dateTextOn.Width, dateTextOn.Location.Y);
+            dateAt.Location = new Point(dateTextOn.Location.X + dateTextOn.Width, dateAt.Location.Y);
+            dateTextAt.Location = new Point(dateTextOn.Location.X + dateTextOn.Width - dateTextAt.Width, dateAt.Location.Y);
         }
 
         private void advanced_FormClosed(object sender, FormClosedEventArgs e)
@@ -68,7 +80,7 @@ namespace AutoOffline
             string OrHr = numUpDownHr.Text;
             DateTime selectedDateTime = new DateTime(DatePicker1.Value.Year, DatePicker1.Value.Month, DatePicker1.Value.Day, int.Parse(numUpDownHr.Text), int.Parse(numUpDownMin.Text), int.Parse(numUpDownSec.Text));
 
-            if (selectedDateTime > DateTime.Now.Date)
+            if (selectedDateTime > DateTime.Now.Date) // Calculate...
             {
                 DateTime now = DateTime.Now;
                 DateTime select = new DateTime(DatePicker1.Value.Year, DatePicker1.Value.Month, DatePicker1.Value.Day, int.Parse(numUpDownHr.Text), int.Parse(numUpDownMin.Text), int.Parse(numUpDownSec.Text));
@@ -76,12 +88,12 @@ namespace AutoOffline
                 times = (int)select.Subtract(now).TotalSeconds;
             }
 
-            if (times == 0 || selectedDateTime <= DateTime.Now)
+            if (times == 0 || selectedDateTime <= DateTime.Now) // Error
             {
                 labelError.Visible = true;
                 labelErrorMessage.Visible = true;
             }
-            else
+            else // Working
             {
                 time = Convert.ToInt32(times);
 
@@ -131,8 +143,10 @@ namespace AutoOffline
 
             var lanConf = new ConfigParser(lanConfig);
 
-            dateOn.Text = ($"{lanConf.GetValue(language, "adv-text")} {DatePicker1.Value.Day.ToString().PadLeft(2, '0')}.{DatePicker1.Value.Month.ToString().PadLeft(2, '0')}.{DatePicker1.Value.Year.ToString().PadLeft(2, '0')}");
-            dateAt.Text = ($"{lanConf.GetValue(language, "adv-text2")} {numUpDownHr.Text.PadLeft(2, '0')}:{numUpDownMin.Text.PadLeft(2, '0')}:{numUpDownSec.Text.PadLeft(2, '0')}");
+            dateTextOn.Text = lanConf.GetValue(language, "adv-text");
+            dateTextAt.Text = lanConf.GetValue(language, "adv-text2");
+            dateOn.Text = $"{DateTime.Now.Day.ToString().PadLeft(2, '0')}.{DateTime.Now.Month.ToString().PadLeft(2, '0')}.{DateTime.Now.Year.ToString().PadLeft(2, '0')}";
+            dateAt.Text = $"{numUpDownHr.Text.PadLeft(2, '0')}:{numUpDownMin.Text.PadLeft(2, '0')}:{numUpDownSec.Text.PadLeft(2, '0')}";
 
         }
 
