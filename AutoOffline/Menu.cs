@@ -2,6 +2,8 @@ using Salaros.Configuration;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Net.Sockets;
 using System.Security.Policy;
 using System.Threading;
@@ -23,12 +25,14 @@ namespace AutoOffline
         private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
         public Menu()
         {
-            string path = @".\config.conf";
-            if (!File.Exists(path))
+            string conPath = @".\config.conf";
+            if (!File.Exists(conPath))
             {
                 // Create the file and write content to it
-                File.WriteAllText(path, $"[CONFIG]\nusername=automatic\nlanguage=en");
+                File.WriteAllText(conPath, $"[CONFIG]\nusername=automatic\nlanguage=en");
             }
+            string lanPath = @".\lanConfig.conf";
+            if (!File.Exists(lanPath)) { lanDownload(); }
 
             InitializeComponent();
             loadform(new home()); // Automatic get the Home View
@@ -61,6 +65,19 @@ namespace AutoOffline
             else if (translate == "settings") { buttonSettings.Text = lanConf.GetValue(language, translate); }
             else if (translate == "help") { buttonHelp.Text = lanConf.GetValue(language, translate); }
             else if (translate == "exit") { buttonExit.Text = lanConf.GetValue(language, translate); }
+        }
+
+        public async void lanDownload()
+        {
+            string lanConfURL = "https://pastebin.com/raw/JxXD65te";
+            string lanConPath = @".\lanConfig.conf";
+            using (HttpClient httpClient = new HttpClient())
+            {
+                string content = await httpClient.GetStringAsync(lanConfURL);
+                File.WriteAllText(lanConPath, content);
+
+                Application.Restart();
+            }
         }
 
         // Below is the Side Menu Code

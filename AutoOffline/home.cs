@@ -99,7 +99,6 @@ namespace AutoOffline
         {
             // Start the timer with the specified number of seconds
             timerPre.Start();
-
         }
 
         public void StopTimer()
