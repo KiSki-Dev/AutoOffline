@@ -69,7 +69,7 @@ namespace AutoOffline
 
         public async void lanDownload()
         {
-            string lanConfURL = "https://pastebin.com/raw/JxXD65te";
+            string lanConfURL = "https://raw.githubusercontent.com/KiSki-Dev/AutoOffline/main/lanConfig.conf";
             string lanConPath = @".\lanConfig.conf";
             using (HttpClient httpClient = new HttpClient())
             {
