@@ -65,7 +65,7 @@
             comboBoxLan.ForeColor = Color.Black;
             comboBoxLan.FormattingEnabled = true;
             comboBoxLan.Items.AddRange(new object[] { "English", "German", "Russian", "Spanish (Soon)" });
-            comboBoxLan.Location = new Point(21, 186);
+            comboBoxLan.Location = new Point(12, 186);
             comboBoxLan.Name = "comboBoxLan";
             comboBoxLan.Size = new Size(193, 33);
             comboBoxLan.TabIndex = 4;
@@ -74,7 +74,7 @@
             // 
             labelLan.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelLan.ForeColor = Color.White;
-            labelLan.Location = new Point(21, 152);
+            labelLan.Location = new Point(16, 152);
             labelLan.Name = "labelLan";
             labelLan.Size = new Size(193, 31);
             labelLan.TabIndex = 14;
@@ -85,7 +85,7 @@
             // 
             labelUsr.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelUsr.ForeColor = Color.White;
-            labelUsr.Location = new Point(21, 253);
+            labelUsr.Location = new Point(16, 253);
             labelUsr.Name = "labelUsr";
             labelUsr.Size = new Size(193, 31);
             labelUsr.TabIndex = 16;
@@ -97,7 +97,7 @@
             richTextBoxUsr.BackColor = Color.Gainsboro;
             richTextBoxUsr.BorderStyle = BorderStyle.None;
             richTextBoxUsr.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            richTextBoxUsr.Location = new Point(21, 288);
+            richTextBoxUsr.Location = new Point(12, 287);
             richTextBoxUsr.Multiline = false;
             richTextBoxUsr.Name = "richTextBoxUsr";
             richTextBoxUsr.ScrollBars = RichTextBoxScrollBars.None;
@@ -147,9 +147,9 @@
             buttonUsr.FlatStyle = FlatStyle.Flat;
             buttonUsr.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
             buttonUsr.ForeColor = Color.White;
-            buttonUsr.Location = new Point(219, 288);
+            buttonUsr.Location = new Point(210, 287);
             buttonUsr.Name = "buttonUsr";
-            buttonUsr.Size = new Size(53, 33);
+            buttonUsr.Size = new Size(75, 33);
             buttonUsr.TabIndex = 24;
             buttonUsr.Text = "Save";
             buttonUsr.UseVisualStyleBackColor = false;
@@ -162,9 +162,9 @@
             buttonLan.FlatStyle = FlatStyle.Flat;
             buttonLan.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
             buttonLan.ForeColor = Color.White;
-            buttonLan.Location = new Point(219, 186);
+            buttonLan.Location = new Point(210, 186);
             buttonLan.Name = "buttonLan";
-            buttonLan.Size = new Size(53, 33);
+            buttonLan.Size = new Size(75, 33);
             buttonLan.TabIndex = 25;
             buttonLan.Text = "Save";
             buttonLan.UseVisualStyleBackColor = false;

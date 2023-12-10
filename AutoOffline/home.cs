@@ -49,12 +49,16 @@ namespace AutoOffline
             var lanConf = new ConfigParser(lanConfig);
 
             if (translate == "preset") { labelPre.Text = lanConf.GetValue(language, translate); }
-            else if (translate == "home-info") { labelInfo.Text = $"{lanConf.GetValue(language, "home-info1")}\n\n\n{lanConf.GetValue(language, "home-info2")}\n{lanConf.GetValue(language, "home-info3")}\n\n" +
-                    $"{lanConf.GetValue(language, "home-info4")}\n{lanConf.GetValue(language, "home-info5")}\n\n{lanConf.GetValue(language, "home-info6")}\n{lanConf.GetValue(language, "home-info7")}"; }
+            else if (translate == "home-info")
+            {
+                labelInfo.Text = $"{lanConf.GetValue(language, "home-info1")}\n\n{lanConf.GetValue(language, "home-info2")}\n{lanConf.GetValue(language, "home-info3")}\n\n" +
+                    $"{lanConf.GetValue(language, "home-info4")}\n{lanConf.GetValue(language, "home-info5")}\n\n{lanConf.GetValue(language, "home-info6")}\n{lanConf.GetValue(language, "home-info7")}";
+            }
             else if (translate == "minute")
-            {   button5m.Text = $"5 {lanConf.GetValue(language, translate)}"; 
-                button10m.Text = $"10 {lanConf.GetValue(language, translate)}"; 
-                button30m.Text = $"30 {lanConf.GetValue(language, translate)}"; 
+            {
+                button5m.Text = $"5 {lanConf.GetValue(language, translate)}";
+                button10m.Text = $"10 {lanConf.GetValue(language, translate)}";
+                button30m.Text = $"30 {lanConf.GetValue(language, translate)}";
             }
             else if (translate == "hour")
             {
@@ -66,8 +70,8 @@ namespace AutoOffline
 
         private void home_FormClosed(object sender, FormClosedEventArgs e)
         {
-                // Unregister this form from the TimerManager when it is closed
-                TimerManager.UnregisterForm(this);
+            // Unregister this form from the TimerManager when it is closed
+            TimerManager.UnregisterForm(this);
         }
 
         public void welcome() // Welcome Text
@@ -81,12 +85,12 @@ namespace AutoOffline
             username = conf.GetValue("CONFIG", "username");
             if (username == "automatic")
             {
-                string username = (Environment.UserName);
-                labelWelcome.Text = (message + username + "!");
+                string username = Environment.UserName;
+                labelWelcome.Text = $"{message} {username}!";
             }
             else if (username != "automatic")
             {
-                labelWelcome.Text = (message + username + "!");
+                labelWelcome.Text = $"{message} {username}!";
             }
 
         }
@@ -104,7 +108,6 @@ namespace AutoOffline
         }
 
         // Presets
-
         private void button5m_Click(object sender, EventArgs e) // Starts Timer and Shutdowns PC after 5 Minutes (300 Seconds)
         {
             seconds = Convert.ToInt32(300);

@@ -1,5 +1,6 @@
 using Salaros.Configuration;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Net.Sockets;
 using System.Security.Policy;
@@ -13,11 +14,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AutoOffline
 {
-
     public partial class Menu : System.Windows.Forms.Form
     {
         public static Menu instance;
         public Label tb1;
+        public string usr_language = System.Globalization.CultureInfo.CurrentCulture.EnglishName;
         private string appConfig = Application.StartupPath + @"\config.conf";
         private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
         public Menu()
@@ -26,7 +27,7 @@ namespace AutoOffline
             if (!File.Exists(path))
             {
                 // Create the file and write content to it
-                File.WriteAllText(path, "[CONFIG]\nusername=automatic\nlanguage=en");
+                File.WriteAllText(path, $"[CONFIG]\nusername=automatic\nlanguage=en");
             }
 
             InitializeComponent();

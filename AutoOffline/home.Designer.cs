@@ -195,9 +195,9 @@
             // 
             labelPre.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
             labelPre.ForeColor = Color.White;
-            labelPre.Location = new Point(444, 118);
+            labelPre.Location = new Point(444, 116);
             labelPre.Name = "labelPre";
-            labelPre.Size = new Size(200, 28);
+            labelPre.Size = new Size(200, 31);
             labelPre.TabIndex = 9;
             labelPre.Text = "Presets";
             labelPre.TextAlign = ContentAlignment.MiddleCenter;

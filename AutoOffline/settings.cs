@@ -28,6 +28,7 @@ namespace AutoOffline
             language("conf");
             language("lan");
             language("usr");
+            language("save");
             language("fea");
             language("feaTxt1");
             language("feaTxt2");
@@ -46,6 +47,7 @@ namespace AutoOffline
             if (translate == "conf") { labelCon.Text = lanConf.GetValue(language, translate); }
             else if (translate == "lan") { labelLan.Text = lanConf.GetValue(language, translate); }
             else if (translate == "usr") { labelUsr.Text = lanConf.GetValue(language, translate); }
+            else if (translate == "save") { buttonUsr.Text = lanConf.GetValue(language, translate); buttonLan.Text = lanConf.GetValue(language, translate); }
             else if (translate == "fea") { labelFea.Text = lanConf.GetValue(language, translate); }
             else if (translate == "feaTxt1") { labelNFeaText.Text = lanConf.GetValue(language, translate); }
             else if (translate == "feaTxt2") { labelNFeaText2.Text = lanConf.GetValue(language, translate); }

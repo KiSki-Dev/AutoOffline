@@ -145,7 +145,7 @@ namespace AutoOffline
 
             dateTextOn.Text = lanConf.GetValue(language, "adv-text");
             dateTextAt.Text = lanConf.GetValue(language, "adv-text2");
-            dateOn.Text = $"{DateTime.Now.Day.ToString().PadLeft(2, '0')}.{DateTime.Now.Month.ToString().PadLeft(2, '0')}.{DateTime.Now.Year.ToString().PadLeft(2, '0')}";
+            dateOn.Text = $"{DatePicker1.Value.Day.ToString().PadLeft(2, '0')}.{DatePicker1.Value.Month.ToString().PadLeft(2, '0')}.{DatePicker1.Value.Year.ToString().PadLeft(2, '0')}";
             dateAt.Text = $"{numUpDownHr.Text.PadLeft(2, '0')}:{numUpDownMin.Text.PadLeft(2, '0')}:{numUpDownSec.Text.PadLeft(2, '0')}";
 
         }

@@ -99,7 +99,6 @@ namespace AutoOffline
             }
         }
 
-
         private void timerBasic_Tick(object sender, EventArgs e)
         {
             var conf = new ConfigParser(appConfig);
@@ -122,7 +121,6 @@ namespace AutoOffline
                 labelCdown.Text = str;
                 Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
-
         }
     }
 }
