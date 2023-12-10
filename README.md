@@ -13,8 +13,8 @@ Known Issues: [Known Issues List](https://github.com/KiSki-Dev/AutoOffline/issue
 License: [License.md](https://github.com/KiSki-Dev/AutoOffline/blob/main/License.md)
 # Todo List:
 - [X] Overwork Advanced Page
-- [ ] Fix Known Issues
-- [ ] Complete the Language Feature
+- [X] Fix Known Issues
+- [X] Complete the Language Feature
 - [ ] Logging System
 ##
 ## AutoOffline (GUI Version) was my first C# Project. Please don't be too hard on me or my code. I'm not advanced, and I'm still learning. Thanks :)
