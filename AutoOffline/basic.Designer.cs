@@ -89,7 +89,7 @@
             // 
             // tbDay
             // 
-            tbDay.BackColor = Color.DarkGray;
+            tbDay.BackColor = Color.FromArgb(120, 100, 168);
             tbDay.BorderStyle = BorderStyle.None;
             tbDay.Cursor = Cursors.IBeam;
             tbDay.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
@@ -104,7 +104,7 @@
             // 
             // tbHr
             // 
-            tbHr.BackColor = Color.DarkGray;
+            tbHr.BackColor = Color.FromArgb(120, 100, 168);
             tbHr.BorderStyle = BorderStyle.None;
             tbHr.Cursor = Cursors.IBeam;
             tbHr.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
@@ -119,7 +119,7 @@
             // 
             // tbMin
             // 
-            tbMin.BackColor = Color.DarkGray;
+            tbMin.BackColor = Color.FromArgb(120, 100, 168);
             tbMin.BorderStyle = BorderStyle.None;
             tbMin.Cursor = Cursors.IBeam;
             tbMin.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
@@ -134,7 +134,7 @@
             // 
             // tbSec
             // 
-            tbSec.BackColor = Color.DarkGray;
+            tbSec.BackColor = Color.FromArgb(120, 100, 168);
             tbSec.BorderStyle = BorderStyle.None;
             tbSec.Cursor = Cursors.IBeam;
             tbSec.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
@@ -149,7 +149,7 @@
             // 
             // buttonFNSH
             // 
-            buttonFNSH.BackColor = Color.FromArgb(130, 109, 178);
+            buttonFNSH.BackColor = Color.FromArgb(100, 80, 148);
             buttonFNSH.Cursor = Cursors.Hand;
             buttonFNSH.FlatStyle = FlatStyle.Flat;
             buttonFNSH.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -210,9 +210,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
+            BackColor = Color.FromArgb(44, 44, 49);
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(686, 450);
             Controls.Add(labelDay);
             Controls.Add(labelHr);
             Controls.Add(labelMin);

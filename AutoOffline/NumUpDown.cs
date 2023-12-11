@@ -48,7 +48,7 @@ namespace AutoOffline
 
     //Fields
     //-> Appearance
-    private Color skinColor = Color.MediumSlateBlue;
+        private Color skinColor = Color.FromArgb(120, 100, 168);
         private Color textColor = Color.White;
         private Color borderColor = Color.PaleVioletRed;
         private int borderSize = 0;
@@ -122,7 +122,7 @@ namespace AutoOffline
             buttonUp.TextAlign = ContentAlignment.TopCenter;
             buttonUp.MouseDown += ButtonUpClick;
 
-            buttonUp.BackColor = Color.FromArgb(255, 112, 97, 204);
+            buttonUp.BackColor = Color.FromArgb(100, 80, 148);
             Controls.Add(buttonUp);
         }
 
@@ -137,7 +137,7 @@ namespace AutoOffline
             buttonDown.TextAlign = ContentAlignment.TopCenter;
             buttonDown.MouseDown += ButtonDownClick;
 
-            buttonDown.BackColor = Color.FromArgb(255, 112, 97, 204);
+            buttonDown.BackColor = Color.FromArgb(100, 80, 148);
             Controls.Add(buttonDown);
         }
 
@@ -148,7 +148,7 @@ namespace AutoOffline
             if (valueLocal < 10) { textBox.Text = "0" + valueLocal + format_str; }
             else { textBox.Text = valueLocal + format_str; }
 
-            textBox.BackColor = Color.MediumSlateBlue;
+            textBox.BackColor = Color.FromArgb(120, 100, 168);
             textBox.ForeColor = Color.White;
 
             int buttonHeight = this.Height;

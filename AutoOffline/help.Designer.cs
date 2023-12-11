@@ -41,7 +41,7 @@
             // pictureBox1
             // 
             pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = Properties.Resources.github;
+            pictureBox1.Image = Properties.Resources.github_white;
             pictureBox1.Location = new Point(49, 301);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(48, 48);
@@ -65,6 +65,7 @@
             linkLabelDisc.AutoSize = true;
             linkLabelDisc.Cursor = Cursors.Hand;
             linkLabelDisc.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabelDisc.LinkColor = Color.FromArgb(90, 90, 255);
             linkLabelDisc.Location = new Point(113, 385);
             linkLabelDisc.Name = "linkLabelDisc";
             linkLabelDisc.Size = new Size(204, 23);
@@ -78,6 +79,7 @@
             linkLabelGit.AutoSize = true;
             linkLabelGit.Cursor = Cursors.Hand;
             linkLabelGit.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabelGit.LinkColor = Color.FromArgb(90, 90, 255);
             linkLabelGit.Location = new Point(113, 314);
             linkLabelGit.Name = "linkLabelGit";
             linkLabelGit.Size = new Size(181, 23);
@@ -102,8 +104,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(44, 44, 49);
+            ClientSize = new Size(701, 450);
             Controls.Add(labelText);
             Controls.Add(linkLabelGit);
             Controls.Add(linkLabelDisc);

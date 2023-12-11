@@ -46,7 +46,7 @@
             // 
             // buttonFNSH
             // 
-            buttonFNSH.BackColor = Color.FromArgb(130, 109, 178);
+            buttonFNSH.BackColor = Color.FromArgb(100, 80, 148);
             buttonFNSH.Cursor = Cursors.Hand;
             buttonFNSH.FlatStyle = FlatStyle.Flat;
             buttonFNSH.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -63,7 +63,7 @@
             // 
             labelCdown.AutoSize = true;
             labelCdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCdown.Location = new Point(689, 388);
+            labelCdown.Location = new Point(208, 401);
             labelCdown.Name = "labelCdown";
             labelCdown.Size = new Size(77, 23);
             labelCdown.TabIndex = 16;
@@ -122,7 +122,7 @@
             DatePicker1.MinimumSize = new Size(0, 35);
             DatePicker1.Name = "DatePicker1";
             DatePicker1.Size = new Size(292, 42);
-            DatePicker1.SkinColor = Color.MediumSlateBlue;
+            DatePicker1.SkinColor = Color.FromArgb(120, 100, 168);
             DatePicker1.TabIndex = 23;
             DatePicker1.TextColor = Color.White;
             DatePicker1.Value = new DateTime(2023, 12, 1, 21, 42, 23, 932);
@@ -141,7 +141,7 @@
             // 
             // numUpDownHr
             // 
-            numUpDownHr.BackColor = Color.Gray;
+            numUpDownHr.BackColor = Color.FromArgb(44, 44, 49);
             numUpDownHr.Cursor = Cursors.Hand;
             numUpDownHr.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownHr.Format = CustomOptions.Hours;
@@ -150,14 +150,14 @@
             numUpDownHr.Name = "numUpDownHr";
             numUpDownHr.RepeatDelayMs = 150;
             numUpDownHr.Size = new Size(89, 85);
-            numUpDownHr.SkinColor = Color.MediumSlateBlue;
+            numUpDownHr.SkinColor = Color.FromArgb(120, 100, 168);
             numUpDownHr.TabIndex = 30;
             numUpDownHr.Text = "0";
             numUpDownHr.TextChanged += numUpDownHr_TextChanged;
             // 
             // numUpDownMin
             // 
-            numUpDownMin.BackColor = Color.Gray;
+            numUpDownMin.BackColor = Color.FromArgb(44, 44, 49);
             numUpDownMin.Cursor = Cursors.Hand;
             numUpDownMin.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownMin.Format = CustomOptions.Minutes;
@@ -166,14 +166,14 @@
             numUpDownMin.Name = "numUpDownMin";
             numUpDownMin.RepeatDelayMs = 100;
             numUpDownMin.Size = new Size(89, 85);
-            numUpDownMin.SkinColor = Color.MediumSlateBlue;
+            numUpDownMin.SkinColor = Color.FromArgb(120, 100, 168);
             numUpDownMin.TabIndex = 31;
             numUpDownMin.Text = "0";
             numUpDownMin.TextChanged += numUpDownMin_TextChanged;
             // 
             // numUpDownSec
             // 
-            numUpDownSec.BackColor = Color.Gray;
+            numUpDownSec.BackColor = Color.FromArgb(44, 44, 49);
             numUpDownSec.Cursor = Cursors.Hand;
             numUpDownSec.Font = new Font("Verdana", 21F, FontStyle.Bold, GraphicsUnit.Point);
             numUpDownSec.Format = CustomOptions.Seconds;
@@ -182,7 +182,7 @@
             numUpDownSec.Name = "numUpDownSec";
             numUpDownSec.RepeatDelayMs = 90;
             numUpDownSec.Size = new Size(89, 85);
-            numUpDownSec.SkinColor = Color.MediumSlateBlue;
+            numUpDownSec.SkinColor = Color.FromArgb(120, 100, 168);
             numUpDownSec.TabIndex = 32;
             numUpDownSec.Text = "0";
             numUpDownSec.TextChanged += numUpDownSec_TextChanged;
@@ -224,8 +224,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(44, 44, 49);
+            ClientSize = new Size(665, 450);
             Controls.Add(dateTextAt);
             Controls.Add(dateOn);
             Controls.Add(dateAt);

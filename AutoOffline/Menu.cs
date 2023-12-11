@@ -134,7 +134,19 @@ namespace AutoOffline
         // Stop Timer
         private void buttonStopSTD_Click(object sender, EventArgs e)
         {
-            Process.Start("shutdown", "-a");
+            ProcessStartInfo psi = new ProcessStartInfo // Make the CMD invisible
+            {
+                FileName = "cmd.exe",
+                RedirectStandardInput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            Process process = new Process { StartInfo = psi };
+
+            process.Start();
+
+            process.StandardInput.WriteLine("shutdown -a");
 
             TimerManager.StopAllTimers(); // Stop all Timers
 

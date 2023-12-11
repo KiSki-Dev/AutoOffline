@@ -99,6 +99,21 @@ namespace AutoOffline
         {
             // Start the timer with the specified number of seconds
             timerPre.Start();
+
+            ProcessStartInfo psi = new ProcessStartInfo // Make the CMD invisible
+            {
+                FileName = "cmd.exe",
+                RedirectStandardInput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            Process process = new Process { StartInfo = psi };
+
+            process.Start();
+
+            process.StandardInput.WriteLine("shutdown /s /t " + seconds);
+
         }
 
         public void StopTimer()
@@ -111,42 +126,36 @@ namespace AutoOffline
         {
             seconds = Convert.ToInt32(300);
             StartTimer(seconds);
-            Process.Start("shutdown", "/s /t 300");
         }
 
         private void button4h_Click(object sender, EventArgs e) // Starts Timer and Shutdowns PC after 4 Hours (14400 Seconds)
         {
             seconds = Convert.ToInt32(14400);
             StartTimer(seconds);
-            Process.Start("shutdown", "/s /t 14400");
         }
 
         private void button2h_Click(object sender, EventArgs e) // Starts Timer and Shutdowns PC after 2 Hours (7200 Seconds)
         {
             seconds = Convert.ToInt32(7200);
             StartTimer(seconds);
-            Process.Start("shutdown", "/s /t 7200");
         }
 
         private void button1h_Click(object sender, EventArgs e) // Starts Timer and Shutdowns PC after 1 Hours (3600 Seconds)
         {
             seconds = Convert.ToInt32(3600);
             StartTimer(seconds);
-            Process.Start("shutdown", "/s /t 3600");
         }
 
         private void button30m_Click(object sender, EventArgs e) // Starts Timer and Shutdowns PC after 30 Minutes (1800 Seconds)
         {
             seconds = Convert.ToInt32(1800);
             StartTimer(seconds);
-            Process.Start("shutdown", "/s /t 1800");
         }
 
         private void button10m_Click(object sender, EventArgs e) // Starts Timer and Shutdowns PC after 10 Minutes (600 Seconds)
         {
             seconds = Convert.ToInt32(600);
             StartTimer(seconds);
-            Process.Start("shutdown", "/s /t 600");
         }
 
         private void timerPre_Tick(object sender, EventArgs e) // Timer

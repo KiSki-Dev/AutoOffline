@@ -47,21 +47,21 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DimGray;
+            panel1.BackColor = Color.FromArgb(64, 64, 69);
             panel1.Controls.Add(button4h);
             panel1.Controls.Add(button2h);
             panel1.Controls.Add(button1h);
             panel1.Controls.Add(button30m);
             panel1.Controls.Add(button10m);
             panel1.Controls.Add(button5m);
-            panel1.Location = new Point(444, 149);
+            panel1.Location = new Point(444, 156);
             panel1.Name = "panel1";
-            panel1.Size = new Size(200, 269);
+            panel1.Size = new Size(200, 258);
             panel1.TabIndex = 4;
             // 
             // button4h
             // 
-            button4h.BackColor = Color.FromArgb(130, 109, 178);
+            button4h.BackColor = Color.FromArgb(100, 80, 148);
             button4h.Cursor = Cursors.Hand;
             button4h.FlatStyle = FlatStyle.Flat;
             button4h.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -76,7 +76,7 @@
             // 
             // button2h
             // 
-            button2h.BackColor = Color.FromArgb(130, 109, 178);
+            button2h.BackColor = Color.FromArgb(100, 80, 148);
             button2h.Cursor = Cursors.Hand;
             button2h.FlatStyle = FlatStyle.Flat;
             button2h.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -91,7 +91,7 @@
             // 
             // button1h
             // 
-            button1h.BackColor = Color.FromArgb(130, 109, 178);
+            button1h.BackColor = Color.FromArgb(100, 80, 148);
             button1h.Cursor = Cursors.Hand;
             button1h.FlatStyle = FlatStyle.Flat;
             button1h.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -106,7 +106,7 @@
             // 
             // button30m
             // 
-            button30m.BackColor = Color.FromArgb(130, 109, 178);
+            button30m.BackColor = Color.FromArgb(100, 80, 148);
             button30m.Cursor = Cursors.Hand;
             button30m.FlatStyle = FlatStyle.Flat;
             button30m.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -121,7 +121,7 @@
             // 
             // button10m
             // 
-            button10m.BackColor = Color.FromArgb(130, 109, 178);
+            button10m.BackColor = Color.FromArgb(100, 80, 148);
             button10m.Cursor = Cursors.Hand;
             button10m.FlatStyle = FlatStyle.Flat;
             button10m.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -136,7 +136,7 @@
             // 
             // button5m
             // 
-            button5m.BackColor = Color.FromArgb(130, 109, 178);
+            button5m.BackColor = Color.FromArgb(100, 80, 148);
             button5m.Cursor = Cursors.Hand;
             button5m.FlatStyle = FlatStyle.Flat;
             button5m.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -158,7 +158,7 @@
             // labelCdown
             // 
             labelCdown.AutoSize = true;
-            labelCdown.BackColor = Color.Gray;
+            labelCdown.BackColor = Color.FromArgb(44, 44, 49);
             labelCdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             labelCdown.ForeColor = Color.Gray;
             labelCdown.Location = new Point(441, 421);
@@ -195,7 +195,7 @@
             // 
             labelPre.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point);
             labelPre.ForeColor = Color.White;
-            labelPre.Location = new Point(444, 116);
+            labelPre.Location = new Point(444, 123);
             labelPre.Name = "labelPre";
             labelPre.Size = new Size(200, 31);
             labelPre.TabIndex = 9;
@@ -206,8 +206,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.FromArgb(44, 44, 49);
+            ClientSize = new Size(679, 450);
             Controls.Add(labelPre);
             Controls.Add(labelWelcome);
             Controls.Add(labelInfo);

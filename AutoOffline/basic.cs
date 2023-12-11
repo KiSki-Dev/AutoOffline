@@ -64,7 +64,20 @@ namespace AutoOffline
             // Start the timer with the specified number of seconds
             int seconds = Convert.ToInt32(time);
             timerBasic.Start();
-            Process.Start("shutdown", "/s /t " + seconds);
+
+            ProcessStartInfo psi = new ProcessStartInfo // Make the CMD invisible
+            {
+                FileName = "cmd.exe",
+                RedirectStandardInput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            Process process = new Process { StartInfo = psi };
+
+            process.Start();
+
+            process.StandardInput.WriteLine("shutdown /s /t " + seconds);
         }
 
         public void StopTimer()

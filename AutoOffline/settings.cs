@@ -113,19 +113,6 @@ namespace AutoOffline
                     Application.Restart();
                 }
             }
-            else if (language == "Spanish")
-            {
-                string message = "Please restart AutoOffline to change the Language.";
-                string title = "Restart AutoOffline";
-                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
-                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
-                if (result == DialogResult.OK)
-                {
-                    conf.SetValue("CONFIG", "language", "en");
-                    conf.Save();
-                    Application.Restart();
-                }
-            }
             else if (language == "Russian")
             {
                 string message = "Please restart AutoOffline to change the Language.";

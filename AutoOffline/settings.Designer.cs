@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             labelCon = new Label();
-            comboBoxLan = new ComboBox();
             labelLan = new Label();
             labelUsr = new Label();
             richTextBoxUsr = new RichTextBox();
@@ -42,6 +43,7 @@
             labelNFeaText2 = new Label();
             labelNFeaText3 = new Label();
             panel1 = new Panel();
+            comboBoxLan = new Guna.UI2.WinForms.Guna2ComboBox();
             SuspendLayout();
             // 
             // labelCon
@@ -54,21 +56,6 @@
             labelCon.TabIndex = 3;
             labelCon.Text = "Config";
             labelCon.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // comboBoxLan
-            // 
-            comboBoxLan.BackColor = Color.Silver;
-            comboBoxLan.Cursor = Cursors.Hand;
-            comboBoxLan.DisplayMember = "English";
-            comboBoxLan.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxLan.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBoxLan.ForeColor = Color.Black;
-            comboBoxLan.FormattingEnabled = true;
-            comboBoxLan.Items.AddRange(new object[] { "English", "German", "Russian", "Spanish (Soon)" });
-            comboBoxLan.Location = new Point(12, 186);
-            comboBoxLan.Name = "comboBoxLan";
-            comboBoxLan.Size = new Size(193, 33);
-            comboBoxLan.TabIndex = 4;
             // 
             // labelLan
             // 
@@ -94,9 +81,10 @@
             // 
             // richTextBoxUsr
             // 
-            richTextBoxUsr.BackColor = Color.Gainsboro;
+            richTextBoxUsr.BackColor = Color.FromArgb(120, 100, 168);
             richTextBoxUsr.BorderStyle = BorderStyle.None;
             richTextBoxUsr.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            richTextBoxUsr.ForeColor = Color.White;
             richTextBoxUsr.Location = new Point(12, 287);
             richTextBoxUsr.Multiline = false;
             richTextBoxUsr.Name = "richTextBoxUsr";
@@ -120,6 +108,7 @@
             // 
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabel1.LinkColor = Color.FromArgb(90, 90, 255);
             linkLabel1.Location = new Point(360, 215);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(167, 23);
@@ -132,6 +121,7 @@
             // 
             linkLabelNFeaText.AutoSize = true;
             linkLabelNFeaText.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            linkLabelNFeaText.LinkColor = Color.FromArgb(90, 90, 255);
             linkLabelNFeaText.Location = new Point(360, 367);
             linkLabelNFeaText.Name = "linkLabelNFeaText";
             linkLabelNFeaText.Size = new Size(252, 23);
@@ -142,7 +132,7 @@
             // 
             // buttonUsr
             // 
-            buttonUsr.BackColor = Color.FromArgb(130, 109, 178);
+            buttonUsr.BackColor = Color.FromArgb(100, 80, 148);
             buttonUsr.Cursor = Cursors.Hand;
             buttonUsr.FlatStyle = FlatStyle.Flat;
             buttonUsr.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
@@ -157,14 +147,14 @@
             // 
             // buttonLan
             // 
-            buttonLan.BackColor = Color.FromArgb(130, 109, 178);
+            buttonLan.BackColor = Color.FromArgb(100, 80, 148);
             buttonLan.Cursor = Cursors.Hand;
             buttonLan.FlatStyle = FlatStyle.Flat;
             buttonLan.Font = new Font("Verdana", 9F, FontStyle.Bold, GraphicsUnit.Point);
             buttonLan.ForeColor = Color.White;
             buttonLan.Location = new Point(210, 186);
             buttonLan.Name = "buttonLan";
-            buttonLan.Size = new Size(75, 33);
+            buttonLan.Size = new Size(75, 36);
             buttonLan.TabIndex = 25;
             buttonLan.Text = "Save";
             buttonLan.UseVisualStyleBackColor = false;
@@ -211,13 +201,37 @@
             panel1.Size = new Size(24, 453);
             panel1.TabIndex = 29;
             // 
+            // comboBoxLan
+            // 
+            comboBoxLan.BackColor = Color.FromArgb(44, 44, 49);
+            comboBoxLan.BorderColor = Color.FromArgb(44, 44, 49);
+            comboBoxLan.Cursor = Cursors.Hand;
+            comboBoxLan.CustomizableEdges = customizableEdges1;
+            comboBoxLan.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBoxLan.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxLan.FillColor = Color.FromArgb(120, 100, 168);
+            comboBoxLan.FocusedColor = Color.FromArgb(44, 44, 49);
+            comboBoxLan.FocusedState.BorderColor = Color.FromArgb(44, 44, 49);
+            comboBoxLan.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBoxLan.ForeColor = Color.White;
+            comboBoxLan.FormattingEnabled = true;
+            comboBoxLan.ItemHeight = 30;
+            comboBoxLan.Items.AddRange(new object[] { "English", "German", "Russian" });
+            comboBoxLan.Location = new Point(12, 186);
+            comboBoxLan.Name = "comboBoxLan";
+            comboBoxLan.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            comboBoxLan.Size = new Size(193, 36);
+            comboBoxLan.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            comboBoxLan.TabIndex = 30;
+            // 
             // settings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            BackColor = Color.Gray;
-            ClientSize = new Size(800, 440);
+            BackColor = Color.FromArgb(44, 44, 49);
+            ClientSize = new Size(665, 440);
+            Controls.Add(comboBoxLan);
             Controls.Add(panel1);
             Controls.Add(labelNFeaText3);
             Controls.Add(labelNFeaText2);
@@ -230,7 +244,6 @@
             Controls.Add(richTextBoxUsr);
             Controls.Add(labelUsr);
             Controls.Add(labelLan);
-            Controls.Add(comboBoxLan);
             Controls.Add(labelCon);
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
@@ -242,7 +255,6 @@
 
         #endregion
         private Label labelCon;
-        private ComboBox comboBoxLan;
         private Label labelLan;
         private Label labelUsr;
         private RichTextBox richTextBoxUsr;
@@ -255,5 +267,6 @@
         private Label labelNFeaText2;
         private Label labelNFeaText3;
         private Panel panel1;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxLan;
     }
 }

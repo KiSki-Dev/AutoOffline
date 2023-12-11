@@ -123,9 +123,9 @@ namespace AutoOffline.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap github {
+        internal static System.Drawing.Bitmap github_white {
             get {
-                object obj = ResourceManager.GetObject("github", resourceCulture);
+                object obj = ResourceManager.GetObject("github-white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
