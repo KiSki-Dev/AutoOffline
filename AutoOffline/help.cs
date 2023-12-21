@@ -42,13 +42,13 @@ namespace AutoOffline
         // Clickable Links
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            string url = "https://discord.gg/CFKjb63KbG";
+            string url = "https://discord.com/invite/cYqpx7dqsn";
             Process.Start("explorer", url);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            string url = "https://discord.gg/CFKjb63KbG";
+            string url = "https://discord.com/invite/cYqpx7dqsn";
             Process.Start("explorer", url);
         }
 

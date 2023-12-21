@@ -127,7 +127,7 @@ namespace AutoOffline
         // Clickable Link
         public void pictureBoxLogo_Click(object sender, EventArgs e) // Logo Click opens Discord
         {
-            string url = "https://discord.gg/CFKjb63KbG";
+            string url = "https://discord.com/invite/cYqpx7dqsn";
             Process.Start("explorer", url);
         }
 
