@@ -30,7 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             buttonFNSH = new Button();
-            labelCdown = new Label();
             labelErrorMessage = new Label();
             labelError = new Label();
             timerAdv = new System.Windows.Forms.Timer(components);
@@ -58,17 +57,6 @@
             buttonFNSH.Text = "Start Shutdown";
             buttonFNSH.UseVisualStyleBackColor = false;
             buttonFNSH.Click += buttonFNSH_Click;
-            // 
-            // labelCdown
-            // 
-            labelCdown.AutoSize = true;
-            labelCdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCdown.Location = new Point(208, 401);
-            labelCdown.Name = "labelCdown";
-            labelCdown.Size = new Size(77, 23);
-            labelCdown.TabIndex = 16;
-            labelCdown.Text = "label1";
-            labelCdown.Visible = false;
             // 
             // labelErrorMessage
             // 
@@ -236,7 +224,6 @@
             Controls.Add(DatePicker1);
             Controls.Add(labelError);
             Controls.Add(labelErrorMessage);
-            Controls.Add(labelCdown);
             Controls.Add(buttonFNSH);
             FormBorderStyle = FormBorderStyle.None;
             Name = "advanced";
@@ -251,7 +238,6 @@
         private RichTextBox tbMin;
         private RichTextBox tbHr;
         private RichTextBox tbDay;
-        private Label labelCdown;
         private Label labelErrorMessage;
         private Label labelError;
         private RichTextBox richTextBox3;

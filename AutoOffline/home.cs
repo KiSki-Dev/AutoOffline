@@ -171,7 +171,6 @@ namespace AutoOffline
             {
                 TimeSpan time = TimeSpan.FromSeconds(seconds--);
                 string str = time.ToString(@"hh\:mm\:ss");
-                labelCdown.Text = str;
                 Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
 

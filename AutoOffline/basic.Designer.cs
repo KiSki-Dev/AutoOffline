@@ -32,7 +32,6 @@
             timerBasic = new System.Windows.Forms.Timer(components);
             labelError = new Label();
             labelErrorMessage = new Label();
-            labelCdown = new Label();
             tbDay = new RichTextBox();
             tbHr = new RichTextBox();
             tbMin = new RichTextBox();
@@ -75,17 +74,6 @@
             labelErrorMessage.Text = "Time cant be 0";
             labelErrorMessage.TextAlign = ContentAlignment.MiddleCenter;
             labelErrorMessage.Visible = false;
-            // 
-            // labelCdown
-            // 
-            labelCdown.AutoSize = true;
-            labelCdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCdown.Location = new Point(553, 63);
-            labelCdown.Name = "labelCdown";
-            labelCdown.Size = new Size(77, 23);
-            labelCdown.TabIndex = 28;
-            labelCdown.Text = "label1";
-            labelCdown.Visible = false;
             // 
             // tbDay
             // 
@@ -219,7 +207,6 @@
             Controls.Add(labelSec);
             Controls.Add(labelError);
             Controls.Add(labelErrorMessage);
-            Controls.Add(labelCdown);
             Controls.Add(tbDay);
             Controls.Add(tbHr);
             Controls.Add(tbMin);
@@ -229,14 +216,12 @@
             Name = "basic";
             Text = "advanced";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
         private System.Windows.Forms.Timer timerBasic;
         private Label labelError;
         private Label labelErrorMessage;
-        private Label labelCdown;
         private RichTextBox tbDay;
         private RichTextBox tbHr;
         private RichTextBox tbMin;

@@ -38,7 +38,6 @@
             button10m = new Button();
             button5m = new Button();
             timerPre = new System.Windows.Forms.Timer(components);
-            labelCdown = new Label();
             labelInfo = new Label();
             labelWelcome = new Label();
             labelPre = new Label();
@@ -155,19 +154,6 @@
             timerPre.Interval = 1000;
             timerPre.Tick += timerPre_Tick;
             // 
-            // labelCdown
-            // 
-            labelCdown.AutoSize = true;
-            labelCdown.BackColor = Color.FromArgb(44, 44, 49);
-            labelCdown.Font = new Font("Verdana", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelCdown.ForeColor = Color.Gray;
-            labelCdown.Location = new Point(441, 421);
-            labelCdown.Name = "labelCdown";
-            labelCdown.Size = new Size(203, 23);
-            labelCdown.TabIndex = 6;
-            labelCdown.Text = "Shutdown not set";
-            labelCdown.Visible = false;
-            // 
             // labelInfo
             // 
             labelInfo.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
@@ -211,14 +197,12 @@
             Controls.Add(labelPre);
             Controls.Add(labelWelcome);
             Controls.Add(labelInfo);
-            Controls.Add(labelCdown);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "home";
             Text = "home";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -230,7 +214,6 @@
         private Button button2h;
         private Button button1h;
         private System.Windows.Forms.Timer timerPre;
-        private Label labelCdown;
         private Label labelInfo;
         private Label labelWelcome;
         private Label labelPre;

@@ -106,7 +106,6 @@ namespace AutoOffline
 
                 labelError.Visible = false;
                 labelErrorMessage.Visible = false;
-                labelCdown.Text = time.ToString();
                 StartTimer(time);
 
             }
@@ -124,14 +123,12 @@ namespace AutoOffline
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"dd\:hh\:mm\:ss");
-                labelCdown.Text = str;
                 Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
             else
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"hh\:mm\:ss");
-                labelCdown.Text = str;
                 Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
         }
