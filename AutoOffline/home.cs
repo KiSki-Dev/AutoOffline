@@ -160,6 +160,7 @@ namespace AutoOffline
 
         private void timerPre_Tick(object sender, EventArgs e) // Timer
         {
+            LocalhostPage webpageClass = new LocalhostPage();
             var conf = new ConfigParser(appConfig);
             string language = conf.GetValue("CONFIG", "language");
             var lanConf = new ConfigParser(lanConfig);
@@ -171,6 +172,8 @@ namespace AutoOffline
             {
                 TimeSpan time = TimeSpan.FromSeconds(seconds--);
                 string str = time.ToString(@"hh\:mm\:ss");
+
+                Menu.instance.time = seconds;
                 Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
 

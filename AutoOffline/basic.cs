@@ -118,6 +118,7 @@ namespace AutoOffline
             var conf = new ConfigParser(appConfig);
             string language = conf.GetValue("CONFIG", "language");
             var lanConf = new ConfigParser(lanConfig);
+
             if (time < 1) // If Timer hits 0 it turns the Timer off and prints "Shutdown not set"
             {
             }
@@ -125,13 +126,16 @@ namespace AutoOffline
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"dd\:hh\:mm\:ss");
+
+                Menu.instance.time = time;
                 Menu.instance.tb1.Text = $"{lanConf.GetValue(language, "cdown")} {str}";
             }
             else
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"hh\:mm\:ss");
-                Menu.instance.remainingTime = time;
+
+                Menu.instance.time = time;
                 Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
         }

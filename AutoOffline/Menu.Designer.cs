@@ -253,7 +253,6 @@
             Name = "Menu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AutoOffline";
-            Load += Menu_Load;
             panelMenuBack.ResumeLayout(false);
             panelMenuBack.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
