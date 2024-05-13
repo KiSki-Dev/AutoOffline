@@ -19,6 +19,7 @@ namespace AutoOffline
         private string lanConfig = Application.StartupPath + @"\lanConfig.conf";
         public static basic instance;
         int time;
+
         public basic()
         {
             InitializeComponent();
@@ -83,6 +84,7 @@ namespace AutoOffline
         public void StopTimer()
         {
             timerBasic.Stop();
+            time = 0;
         }
 
         private void buttonFNSH_Click_1(object sender, EventArgs e)
@@ -123,12 +125,13 @@ namespace AutoOffline
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"dd\:hh\:mm\:ss");
-                Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
+                Menu.instance.tb1.Text = $"{lanConf.GetValue(language, "cdown")} {str}";
             }
             else
             {
                 TimeSpan seconds = TimeSpan.FromSeconds(time--);
                 string str = seconds.ToString(@"hh\:mm\:ss");
+                Menu.instance.remainingTime = time;
                 Menu.instance.tb1.Text = ($"{lanConf.GetValue(language, "cdown")} {str}");
             }
         }
