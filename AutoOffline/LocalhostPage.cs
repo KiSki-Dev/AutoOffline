@@ -20,7 +20,7 @@ namespace AutoOffline
             _serverThread = new Thread(StartServer);
             _serverThread.Start();
 
-            _htmlFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads", "index.html");
+            _htmlFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads", "timer.html");
         }
 
         private void StartServer()

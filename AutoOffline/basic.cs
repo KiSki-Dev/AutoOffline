@@ -114,7 +114,7 @@ namespace AutoOffline
         }
 
         private void timerBasic_Tick(object sender, EventArgs e)
-        {
+        {       
             var conf = new ConfigParser(appConfig);
             string language = conf.GetValue("CONFIG", "language");
             var lanConf = new ConfigParser(lanConfig);
