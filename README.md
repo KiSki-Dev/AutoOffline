@@ -2,7 +2,7 @@
 # Overview
 ## AutoOffline: automatically shuts down your PC after a specified time.
 
-### AutoOffline GUI Version was written in C#. [Click here](https://github.com/KiSki-Dev/AutoOfflinePy) for the Python Version of AutoOffline.
+### AutoOffline GUI Version was written in C#. [Click here](https://github.com/KiSki-Dev/AutoOfflineCLI) for the Python/Client Version of AutoOffline.
 #
 If you want to contact me, you can join my [Discord Server](https://discord.gg/53zaeTbYRn).
 
